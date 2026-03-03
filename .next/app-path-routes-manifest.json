@@ -1,0 +1,19 @@
+{
+  "/[module]/page": "/[module]",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/attendance/route": "/api/attendance",
+  "/api/departments/route": "/api/departments",
+  "/api/employee-archives/route": "/api/employee-archives",
+  "/api/employee-contracts/route": "/api/employee-contracts",
+  "/api/employees/route": "/api/employees",
+  "/api/leave-balances/route": "/api/leave-balances",
+  "/api/leave/route": "/api/leave",
+  "/api/menu/route": "/api/menu",
+  "/api/onboarding/route": "/api/onboarding",
+  "/api/personnel-changes/route": "/api/personnel-changes",
+  "/api/positions/route": "/api/positions",
+  "/api/probation/route": "/api/probation",
+  "/api/shifts/route": "/api/shifts",
+  "/page": "/"
+}

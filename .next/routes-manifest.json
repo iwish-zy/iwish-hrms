@@ -1,0 +1,149 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/[module]",
+      "regex": "^/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPmodule": "nxtPmodule"
+      },
+      "namedRegex": "^/(?<nxtPmodule>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/api/attendance",
+      "regex": "^/api/attendance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/attendance(?:/)?$"
+    },
+    {
+      "page": "/api/departments",
+      "regex": "^/api/departments(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/departments(?:/)?$"
+    },
+    {
+      "page": "/api/employee-archives",
+      "regex": "^/api/employee\\-archives(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/employee\\-archives(?:/)?$"
+    },
+    {
+      "page": "/api/employee-contracts",
+      "regex": "^/api/employee\\-contracts(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/employee\\-contracts(?:/)?$"
+    },
+    {
+      "page": "/api/employees",
+      "regex": "^/api/employees(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/employees(?:/)?$"
+    },
+    {
+      "page": "/api/leave",
+      "regex": "^/api/leave(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/leave(?:/)?$"
+    },
+    {
+      "page": "/api/leave-balances",
+      "regex": "^/api/leave\\-balances(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/leave\\-balances(?:/)?$"
+    },
+    {
+      "page": "/api/menu",
+      "regex": "^/api/menu(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/menu(?:/)?$"
+    },
+    {
+      "page": "/api/onboarding",
+      "regex": "^/api/onboarding(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/onboarding(?:/)?$"
+    },
+    {
+      "page": "/api/personnel-changes",
+      "regex": "^/api/personnel\\-changes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/personnel\\-changes(?:/)?$"
+    },
+    {
+      "page": "/api/positions",
+      "regex": "^/api/positions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/positions(?:/)?$"
+    },
+    {
+      "page": "/api/probation",
+      "regex": "^/api/probation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/probation(?:/)?$"
+    },
+    {
+      "page": "/api/shifts",
+      "regex": "^/api/shifts(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/shifts(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

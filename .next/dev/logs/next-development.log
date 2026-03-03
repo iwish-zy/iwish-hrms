@@ -1,0 +1,429 @@
+[00:00:18.971] Server  LOG     ✓ Ready in 13.9s
+[00:00:22.040] Server  LOG     ○ Compiling /api/menu ...
+[00:00:29.115] Server  LOG     ○ Compiling / ...
+[00:00:38.855] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:38.992] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:40.051] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:40.051] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:40.051] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#employee color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772418468993} /_vercel/insights/view
+[00:00:40.413] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:40.413] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:40.413] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772418469064} /_vercel/insights/view
+[00:00:53.355] Server  LOG     ✓ Compiled in 89ms
+[00:01:29.137] Server  LOG     ✓ Compiled in 77ms
+[00:01:44.287] Server  LOG     ✓ Compiled in 74ms
+[00:02:12.290] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:13.098] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:13.098] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:02:13.098] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#employee color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772418562035} /_vercel/insights/view
+[00:02:55.993] Server  LOG     ✓ Compiled in 71ms
+[00:03:28.130] Server  LOG     ✓ Compiled in 72ms
+[00:03:31.504] Server  LOG     ✓ Compiled in 97ms
+[00:04:03.625] Server  LOG     ✓ Compiled in 69ms
+[00:04:12.836] Server  LOG     ✓ Compiled in 74ms
+[00:04:51.256] Server  LOG     ✓ Compiled in 75ms
+[00:04:52.999] Server  LOG     ✓ Compiled in 69ms
+[00:04:55.318] Server  LOG     ✓ Compiled in 74ms
+[00:05:21.222] Server  LOG     ✓ Compiled in 69ms
+[00:05:26.194] Server  LOG     ✓ Compiled in 70ms
+[00:05:29.267] Server  LOG     ✓ Compiled in 75ms
+[00:05:41.303] Server  LOG     ✓ Compiled in 69ms
+[00:08:04.322] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:08:04.322] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:10:49.603] Browser ERROR   Error uploading: {"message":"Bucket not found","name":"StorageApiError","status":400,"statusCode":"404"}
+[00:10:58.296] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:10:58.296] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:11:27.805] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:11:27.805] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:12:22.377] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:12:22.377] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:12:31.439] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:12:31.439] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:12:35.165] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:12:35.165] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:13:32.985] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:13:32.985] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:13:56.328] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:13:56.328] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:14:40.914] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:14:40.914] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:18:43.807] Server  LOG     ✓ Compiled in 157ms
+[00:18:54.925] Server  LOG     ✓ Compiled in 76ms
+[00:19:00.473] Server  LOG     ✓ Compiled in 76ms
+[00:19:05.409] Server  LOG     ✓ Compiled in 76ms
+[00:39:31.696] Server  LOG     ✓ Compiled in 90ms
+[00:39:32.148] Server  LOG     ✓ Compiled in 129ms
+[00:39:33.121] Server  LOG     ✓ Compiled in 101ms
+[00:39:33.859] Server  LOG     ✓ Compiled in 84ms
+[00:39:34.045] Server  LOG     ✓ Compiled in 103ms
+[00:40:01.091] Browser ERROR   uncaughtError: TypeError: personnelChanges.filter is not a function
+[00:40:08.428] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:40:09.250] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:40:09.250] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:40:09.250] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#resignation color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#resignation","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772420838246} /_vercel/insights/view
+[00:40:09.712] Browser ERROR   uncaughtError: TypeError: personnelChanges.filter is not a function
+[00:40:43.343] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:40:44.198] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:40:44.198] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:40:44.198] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#resignation color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#resignation","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772420873188} /_vercel/insights/view
+[00:40:44.749] Browser ERROR   uncaughtError: TypeError: personnelChanges.filter is not a function
+[00:41:44.662] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:41:45.011] Server  LOG     ✓ Compiled in 235ms
+[00:41:45.414] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:41:46.282] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:41:46.282] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:41:46.282] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#resignation color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#resignation","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772420935274} /_vercel/insights/view
+[00:41:46.632] Browser ERROR   uncaughtError: TypeError: personnelChanges.filter is not a function
+[00:52:02.823] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:52:04.416] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:52:04.416] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:52:04.416] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#resignation color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#resignation","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772421552629} /_vercel/insights/view
+[00:52:05.427] Browser ERROR   uncaughtError: TypeError: personnelChanges.filter is not a function
+[00:56:50.289] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:56:50.658] Server  LOG     ✓ Compiled in 104ms
+[00:56:50.925] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:56:52.421] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:56:52.421] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:56:52.421] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#resignation color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#resignation","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772421840908} /_vercel/insights/view
+[00:56:53.423] Browser ERROR   uncaughtError: TypeError: personnelChanges.filter is not a function
+[03:42:37.017] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:42:37.461] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[03:42:37.461] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[03:42:37.461] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#resignation color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#resignation","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772431786678} /_vercel/insights/view
+[03:42:38.566] Browser ERROR   uncaughtError: TypeError: personnelChanges.filter is not a function
+[03:43:09.981] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:43:10.778] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[03:43:10.778] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[03:43:10.778] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#resignation color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#resignation","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772431819992} /_vercel/insights/view
+[03:43:11.438] Browser ERROR   uncaughtError: TypeError: personnelChanges.filter is not a function
+[03:43:15.463] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:43:16.900] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[03:43:16.900] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[03:43:16.900] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#employee color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772431825687} /_vercel/insights/view
+[03:43:20.063] Browser ERROR   uncaughtError: TypeError: onboardingTasks.filter is not a function
+[04:06:48.096] Server  LOG     ✓ Compiled in 304ms
+[04:06:48.107] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[04:06:48.793] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:06:50.416] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:06:50.416] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[04:06:50.416] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#onboarding color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#onboarding","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772433239253} /_vercel/insights/view
+[04:06:51.425] Browser ERROR   uncaughtError: TypeError: onboardingTasks.map is not a function
+[04:07:54.901] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:07:55.694] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:07:55.694] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[04:07:55.694] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#onboarding color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#onboarding","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772433304934} /_vercel/insights/view
+[04:07:56.086] Browser ERROR   uncaughtError: TypeError: onboardingTasks.map is not a function
+[04:08:48.493] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:08:49.297] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:08:49.297] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[04:08:49.297] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#onboarding color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#onboarding","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772433358537} /_vercel/insights/view
+[04:08:49.870] Browser ERROR   uncaughtError: TypeError: onboardingTasks.map is not a function
+[04:11:47.695] Server  LOG     ✓ Compiled in 89ms
+[04:11:47.699] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[04:11:48.401] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:11:50.429] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:11:50.429] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[04:11:50.429] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#onboarding color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#onboarding","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772433539199} /_vercel/insights/view
+[04:13:56.293] Browser ERROR   uncaughtError: ReferenceError: placeholderConfig is not defined
+[04:14:00.592] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:14:01.411] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:14:01.411] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[04:14:01.411] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#transfer color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#transfer","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772433670665} /_vercel/insights/view
+[04:14:42.430] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[04:14:42.430] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[04:15:56.403] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[04:15:56.403] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[04:16:13.296] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[04:16:13.296] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[04:16:25.955] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[04:16:25.955] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[04:18:02.599] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[04:18:02.599] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[04:20:19.640] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[04:20:19.640] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[04:20:27.649] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:20:28.577] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:20:28.577] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[04:20:28.577] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#employee color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772434057841} /_vercel/insights/view
+[04:20:30.652] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[04:20:30.652] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[04:26:21.522] Server  LOG     ✓ Compiled in 82ms
+[04:26:42.315] Server  LOG     ✓ Compiled in 86ms
+[04:45:48.300] Browser ERROR   uncaughtError: ReferenceError: placeholderConfig is not defined
+[04:45:59.073] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:45:59.925] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:45:59.925] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[04:45:59.925] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#resignation color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#resignation","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772435589214} /_vercel/insights/view
+[05:04:57.805] Server  LOG     ✓ Compiled in 320ms
+[05:07:55.077] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[05:07:55.077] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[05:11:35.859] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:11:36.740] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:11:36.740] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:11:36.740] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#employee color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772437126063} /_vercel/insights/view
+[05:11:40.217] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[05:11:40.217] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[05:12:13.981] Browser ERROR   Error uploading: {"message":"Bucket not found","name":"StorageApiError","status":400,"statusCode":"404"}
+[05:12:24.045] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[05:12:24.045] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[05:44:35.189] Server  LOG     ✓ Compiled in 95ms
+[06:02:41.113] Browser ERROR   Error uploading: {}
+[06:02:55.551] Browser ERROR   Error uploading: {}
+[06:04:01.697] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:04:01.697] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:04:12.494] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:04:12.494] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:04:50.410] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:04:50.410] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:05:04.542] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:05:04.542] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:05:14.443] Browser ERROR   Error uploading: {}
+[06:07:06.092] Browser ERROR   Error uploading: {"message":"Invalid key: employees/AW001/其他/p7xg9y1qgkp-1772440453531.pdf","name":"StorageApiError","status":400,"statusCode":"400"}
+[06:09:57.600] Server  LOG     ✓ Compiled in 123ms
+[06:11:32.208] Browser ERROR   Error uploading: {"message":"Invalid key: employees/AW001/其他/32k4uahs4dg-1772440719290.pdf","name":"StorageApiError","status":400,"statusCode":"400"}
+[06:14:54.018] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:14:54.018] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:15:02.244] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:15:02.244] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:15:12.624] Browser ERROR   Error uploading: {"message":"Invalid key: employees/AW001/其他/u1wlzns195b-1772440938816.pdf","name":"StorageApiError","status":400,"statusCode":"400"}
+[06:16:10.660] Server  LOG     ✓ Compiled in 78ms
+[06:16:12.109] Server  LOG     ✓ Compiled in 71ms
+[06:16:27.531] Server  LOG     ✓ Compiled in 72ms
+[06:18:46.290] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:18:47.472] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[06:18:47.472] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[06:18:47.472] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#employee color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772441156875} /_vercel/insights/view
+[06:18:49.484] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:18:49.484] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:23:47.121] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:23:47.121] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:24:05.128] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:24:05.128] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:24:16.056] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:24:16.056] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:32:20.225] Server  LOG     ✓ Compiled in 104ms
+[06:34:07.969] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:34:09.119] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[06:34:09.119] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[06:34:09.119] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#employee color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772442078546} /_vercel/insights/view
+[06:34:13.217] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:34:13.217] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:35:06.133] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:35:06.133] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:35:53.889] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:35:53.889] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:36:12.698] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:36:12.699] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:37:03.387] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:37:03.387] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:38:01.159] Server  LOG     ✓ Compiled in 159ms
+[06:38:04.841] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:38:04.841] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:38:10.543] Server  LOG     ✓ Compiled in 143ms
+[06:38:16.798] Server  LOG     ✓ Compiled in 109ms
+[06:38:26.732] Server  LOG     ✓ Compiled in 105ms
+[06:38:34.716] Server  LOG     ✓ Compiled in 143ms
+[06:39:32.744] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:39:32.744] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:39:35.719] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:39:36.675] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[06:39:36.675] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[06:39:36.675] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#employee color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772442406103} /_vercel/insights/view
+[06:39:40.346] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:39:40.944] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[06:39:40.944] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[06:39:40.944] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772442410374} /_vercel/insights/view
+[06:39:44.773] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[06:39:44.773] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:12:10.205] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:12:10.205] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:12:14.421] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:12:15.475] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[07:12:15.475] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[07:12:15.475] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#employee color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772444364945} /_vercel/insights/view
+[07:12:17.732] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:12:17.732] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:12:50.884] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:12:51.953] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[07:12:51.953] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[07:12:51.953] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#employee color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772444401342} /_vercel/insights/view
+[07:12:55.026] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:12:55.026] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:13:01.435] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:13:01.435] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:13:49.536] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:13:49.536] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:17:40.561] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:17:40.561] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:20:53.344] Server  LOG     ✓ Compiled in 136ms
+[07:21:00.235] Server  LOG     ✓ Compiled in 99ms
+[07:21:09.384] Server  LOG     ✓ Compiled in 113ms
+[07:21:22.834] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:21:22.834] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:21:23.064] Server  LOG     ✓ Compiled in 141ms
+[07:21:37.000] Server  LOG     ✓ Compiled in 154ms
+[07:21:53.095] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:21:53.095] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:21:56.976] Server  LOG     ✓ Compiled in 209ms
+[07:21:58.565] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:21:58.565] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:22:04.780] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:22:04.780] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:22:25.717] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:22:25.717] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:23:13.407] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:23:13.884] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[07:23:13.884] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[07:23:13.884] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772445023374} /_vercel/insights/view
+[07:24:24.690] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:24:24.690] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:26:08.857] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:26:08.857] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:28:28.240] Server  LOG     ✓ Compiled in 115ms
+[07:28:36.111] Server  LOG     ✓ Compiled in 94ms
+[07:28:47.566] Server  LOG     ✓ Compiled in 90ms
+[07:28:56.904] Server  LOG     ✓ Compiled in 113ms
+[07:29:05.545] Server  LOG     ✓ Compiled in 90ms
+[07:29:36.868] Server  LOG     ✓ Compiled in 98ms
+[07:30:59.195] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:30:59.196] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:33:05.990] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:33:05.990] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:33:11.726] Server  LOG     ○ Compiling /_not-found/page ...
+[07:34:04.029] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:34:04.029] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:34:11.066] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[07:34:11.066] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[23:31:16.334] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[23:31:16.334] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[24:09:31.541] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[24:09:31.541] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[24:12:02.857] Browser ERROR   uncaughtError: ReferenceError: placeholderConfig is not defined
+[24:12:09.942] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:12:10.513] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[24:12:10.513] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[24:12:10.513] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#resignation color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#resignation","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772505561263} /_vercel/insights/view
+[24:12:24.853] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[24:12:24.853] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[24:15:17.662] Browser ERROR   uncaughtError: ReferenceError: placeholderConfig is not defined
+[24:15:21.398] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:15:22.453] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[24:15:22.453] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[24:15:22.453] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#employee color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772505753141} /_vercel/insights/view
+[24:17:32.793] Browser ERROR   uncaughtError: ReferenceError: placeholderConfig is not defined
+[24:17:35.585] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:17:36.542] Browser ERROR   uncaughtError: ReferenceError: placeholderConfig is not defined
+[24:17:45.023] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:17:46.055] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[24:17:46.055] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[24:17:46.055] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#employee color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772505896801} /_vercel/insights/view
+[24:17:51.529] Browser ERROR   uncaughtError: ReferenceError: placeholderConfig is not defined
+[24:17:55.617] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:17:56.522] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[24:17:56.522] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[24:17:56.522] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#resignation color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#resignation","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772505907274} /_vercel/insights/view
+[24:19:08.328] Server  LOG     ✓ Compiled in 1084ms
+[24:37:33.558] Browser ERROR   uncaughtError: TypeError: attendanceRecords.filter is not a function
+[24:37:50.591] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:37:51.562] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[24:37:51.562] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[24:37:51.562] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#probation color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#probation","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772507102331} /_vercel/insights/view
+[24:37:58.104] Browser ERROR   uncaughtError: TypeError: attendanceRecords.filter is not a function
+[24:37:59.963] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:38:00.829] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[24:38:00.829] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[24:38:00.829] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#attendance color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#attendance","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772507111600} /_vercel/insights/view
+[24:38:01.463] Browser ERROR   uncaughtError: TypeError: attendanceRecords.filter is not a function
+[24:38:26.061] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:38:26.945] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[24:38:26.945] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[24:38:26.945] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#attendance color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#attendance","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772507137726} /_vercel/insights/view
+[24:38:27.524] Browser ERROR   uncaughtError: TypeError: attendanceRecords.filter is not a function
+[24:38:29.633] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:38:30.484] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[24:38:30.484] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[24:38:30.484] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#leave color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#leave","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772507141257} /_vercel/insights/view
+[24:38:40.222] Server  LOG     ✓ Compiled in 248ms
+[24:38:47.522] Server  LOG     ✓ Compiled in 72ms
+[24:39:45.369] Browser ERROR   uncaughtError: TypeError: leaveRequests.map is not a function
+[24:40:38.014] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[24:40:38.526] Server  LOG     ✓ Compiled in 191ms
+[24:40:38.844] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:40:39.894] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[24:40:39.894] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[24:40:39.894] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#attendance color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#attendance","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772507270674} /_vercel/insights/view
+[24:40:40.346] Browser ERROR   uncaughtError: TypeError: leaveRequests.map is not a function
+[24:40:45.526] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[24:40:45.527] Server  LOG     ✓ Compiled in 111ms
+[24:40:46.416] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:40:47.463] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[24:40:47.463] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[24:40:47.463] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#attendance color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#attendance","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772507278240} /_vercel/insights/view
+[24:40:47.968] Browser ERROR   uncaughtError: TypeError: leaveRequests.map is not a function
+[24:40:52.299] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[24:40:52.736] Server  LOG     ✓ Compiled in 115ms
+[24:40:53.459] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:40:54.012] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[24:40:54.012] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[24:40:54.012] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#attendance color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#attendance","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772507284796} /_vercel/insights/view
+[24:40:54.668] Browser ERROR   uncaughtError: TypeError: leaveBalances.map is not a function
+[24:40:59.355] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[24:40:59.782] Server  LOG     ✓ Compiled in 71ms
+[24:41:00.122] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:41:01.127] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[24:41:01.127] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[24:41:01.128] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#attendance color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#attendance","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772507291911} /_vercel/insights/view
+[24:41:01.625] Browser ERROR   uncaughtError: TypeError: shiftTypes.map is not a function
+[24:41:06.249] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[24:41:06.261] Server  LOG     ✓ Compiled in 79ms
+[24:41:07.092] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[24:41:08.204] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[24:41:08.204] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[24:41:08.204] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#attendance color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#attendance","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772507298982} /_vercel/insights/view
+[29:42:46.318] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[29:42:47.012] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[29:42:47.012] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[29:42:47.012] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#attendance color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#attendance","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772525398163} /_vercel/insights/view
+[29:42:55.867] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[29:42:56.946] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[29:42:56.947] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[29:42:56.947] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#employee color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772525408044} /_vercel/insights/view
+[30:21:03.950] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[30:21:03.950] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[30:21:08.926] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[30:21:09.443] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[30:21:09.443] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[30:21:09.443] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772527700646} /_vercel/insights/view
+[30:24:53.921] Server  LOG     ✓ Compiled in 146ms
+[30:25:03.373] Server  LOG     ✓ Compiled in 91ms
+[30:25:13.520] Server  LOG     ✓ Compiled in 96ms
+[30:25:24.359] Server  LOG     ✓ Compiled in 60ms
+[30:25:37.864] Server  LOG     ✓ Compiled in 176ms
+[30:26:00.921] Server  LOG     ✓ Finished filesystem cache database compaction in 20.8s
+[30:26:45.244] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[30:26:46.418] Browser ERROR   Can't perform a React state update on a component that hasn't mounted yet. This indicates that you have a side-effect in your render function that asynchronously tries to update the component. Move this work to useEffect instead.
+[30:26:47.427] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[30:26:47.427] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[30:26:47.427] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#employee color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528038365} /_vercel/insights/view
+[30:41:37.052] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[30:41:37.992] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[30:41:37.992] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[30:41:37.992] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/#employee color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/#employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528929211} /_vercel/insights/view
+[30:41:50.160] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/position color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/position","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528941341} /_vercel/insights/view
+[30:41:53.779] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/employee color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528944906} /_vercel/insights/view
+[30:41:57.114] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/onboarding color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/onboarding","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528948299} /_vercel/insights/view
+[30:41:58.678] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/probation color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/probation","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528949851} /_vercel/insights/view
+[30:41:59.882] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/transfer color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/transfer","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528951070} /_vercel/insights/view
+[30:42:00.526] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/contract color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/contract","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528951710} /_vercel/insights/view
+[30:42:01.747] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/employee color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528952908} /_vercel/insights/view
+[30:42:06.030] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/position color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/position","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528957211} /_vercel/insights/view
+[30:42:09.418] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/organization color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/organization","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528960598} /_vercel/insights/view
+[30:42:10.236] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528961385} /_vercel/insights/view
+[30:42:11.807] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/position color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/position","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528963011} /_vercel/insights/view
+[30:42:13.235] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/organization color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/organization","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528964418} /_vercel/insights/view
+[30:42:15.359] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/onboarding color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/onboarding","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528966547} /_vercel/insights/view
+[30:42:15.974] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/transfer color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/transfer","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528967155} /_vercel/insights/view
+[30:42:18.043] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/contract color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/contract","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528969233} /_vercel/insights/view
+[30:42:19.007] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/employee color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528970174} /_vercel/insights/view
+[30:42:26.777] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/onboarding color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/onboarding","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528977963} /_vercel/insights/view
+[30:42:28.542] Browser LOG     %c[Vercel Web Analytics]%c [view] http://localhost:3000/employee color: rgb(120, 120, 120) color: inherit {"dp":"/[module]","o":"http://localhost:3000/employee","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1772528979707} /_vercel/insights/view

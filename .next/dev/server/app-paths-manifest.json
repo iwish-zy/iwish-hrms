@@ -1,0 +1,18 @@
+{
+  "/[module]/page": "app/[module]/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/attendance/route": "app/api/attendance/route.js",
+  "/api/departments/route": "app/api/departments/route.js",
+  "/api/employee-archives/route": "app/api/employee-archives/route.js",
+  "/api/employee-contracts/route": "app/api/employee-contracts/route.js",
+  "/api/employees/route": "app/api/employees/route.js",
+  "/api/leave-balances/route": "app/api/leave-balances/route.js",
+  "/api/leave/route": "app/api/leave/route.js",
+  "/api/menu/route": "app/api/menu/route.js",
+  "/api/onboarding/route": "app/api/onboarding/route.js",
+  "/api/personnel-changes/route": "app/api/personnel-changes/route.js",
+  "/api/positions/route": "app/api/positions/route.js",
+  "/api/probation/route": "app/api/probation/route.js",
+  "/api/shifts/route": "app/api/shifts/route.js",
+  "/page": "app/page.js"
+}
