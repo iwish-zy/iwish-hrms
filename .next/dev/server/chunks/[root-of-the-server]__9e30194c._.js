@@ -92,7 +92,15 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$serv
 ;
 async function GET() {
     const supabase = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2f$server$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["createClient"])();
-    const { data, error } = await supabase.from("probation_records").select("*").order("probation_end", {
+    const { data, error } = await supabase.from("probation_records").select(`
+      *,
+      employee:employees(
+        id, 
+        name, 
+        department:departments(name), 
+        position:positions(name)
+      )
+    `).order("probation_end_date", {
         ascending: true
     });
     if (error) return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
@@ -100,7 +108,24 @@ async function GET() {
     }, {
         status: 500
     });
-    return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json(data || []);
+    // 格式化数据，计算剩余天数等
+    const formattedData = (data || []).map((record)=>{
+        const today = new Date();
+        const endDate = new Date(record.probation_end_date);
+        const diffTime = endDate.getTime() - today.getTime();
+        const daysLeft = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        return {
+            ...record,
+            name: record.employee?.name,
+            department: record.employee?.department?.name,
+            position: record.employee?.position?.name,
+            joinDate: record.join_date,
+            probationEnd: record.probation_end_date,
+            daysLeft: Math.max(0, daysLeft),
+            progress: Math.min(100, Math.max(0, Math.round((record.probation_months * 30 - daysLeft) / (record.probation_months * 30) * 100)))
+        };
+    });
+    return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json(formattedData);
 }
 async function POST(request) {
     const supabase = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2f$server$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["createClient"])();

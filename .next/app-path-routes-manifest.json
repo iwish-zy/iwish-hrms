@@ -13,7 +13,9 @@
   "/api/onboarding/route": "/api/onboarding",
   "/api/personnel-changes/route": "/api/personnel-changes",
   "/api/positions/route": "/api/positions",
+  "/api/probation/evaluations/route": "/api/probation/evaluations",
   "/api/probation/route": "/api/probation",
+  "/api/probation/templates/route": "/api/probation/templates",
   "/api/shifts/route": "/api/shifts",
   "/page": "/"
 }

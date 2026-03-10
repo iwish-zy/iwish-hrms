@@ -17,6 +17,7 @@ import useSWR from "swr"
 import { supabase } from "@/lib/supabase"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog"
+import solarlunar from "solarlunar"
 
 // Types
 interface Employee {
@@ -25,6 +26,9 @@ interface Employee {
   name: string
   gender: string
   birthday: string | null
+  birthday_calendar?: string | null
+  birthday_lunar?: string | null
+  birthday_solar?: string | null
   id_card: string | null
   phone: string | null
   email: string | null
@@ -45,6 +49,32 @@ interface Employee {
   address: string | null
   avatar_url: string | null
   created_at: string
+}
+
+interface EmployeeFormData {
+  employee_id: string
+  name: string
+  gender: string
+  birthday: string
+  birthday_calendar: string
+  birthday_lunar: string
+  birthday_solar: string
+  id_card: string
+  phone: string
+  email: string
+  education_level: string
+  school: string
+  major: string
+  department_id: string
+  position_id: string
+  level: string
+  join_date: string
+  status: string
+  bank_account: string
+  bank_name: string
+  emergency_contact_name: string
+  emergency_contact_phone: string
+  address: string
 }
 
 interface Contract {
@@ -76,6 +106,408 @@ const statusColors: Record<string, string> = {
   "在职": "bg-success/10 text-success border-success/20",
   "试用期": "bg-warning/10 text-warning border-warning/20",
   "离职": "bg-destructive/10 text-destructive border-destructive/20",
+}
+
+const EmployeeForm = ({ 
+  type: _type, 
+  formData, 
+  setFormData, 
+  flatDepts, 
+  positions, 
+  posSearch, 
+  setPosSearch, 
+  filteredPositions 
+}: { 
+  type: 'add' | 'edit', 
+  formData: EmployeeFormData, 
+  setFormData: React.Dispatch<React.SetStateAction<EmployeeFormData>>,
+  flatDepts: any[],
+  positions: any[],
+  posSearch: string,
+  setPosSearch: React.Dispatch<React.SetStateAction<string>>,
+  filteredPositions: any[]
+}) => (
+  <ScrollArea className="flex-1 bg-background min-h-0 overflow-y-scroll">
+    <div className="p-8 space-y-8 pb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Basic Info Section */}
+        <div className="space-y-4">
+          <h4 className="text-sm font-semibold flex items-center gap-2 text-foreground/70 uppercase tracking-wider">
+            <ShieldCheck className="size-4 text-primary" />
+            基本信息
+          </h4>
+          <div className="space-y-4 bg-muted/20 p-5 rounded-2xl border border-muted-foreground/10 ">
+            <div className="space-y-2">
+              <Label>工号 <span className="text-destructive font-bold">*</span></Label>
+              <Input 
+                placeholder="EMP-2026-001" 
+                className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
+                value={formData.employee_id}
+                onChange={(e) => setFormData(prev => ({ ...prev, employee_id: e.target.value }))}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label>姓名 <span className="text-destructive font-bold">*</span></Label>
+              <Input 
+                placeholder="请输入真实姓名" 
+                className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
+                value={formData.name}
+                onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+              />
+            </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label>性别 <span className="text-destructive font-bold">*</span></Label>
+                  <Select 
+                    value={formData.gender}
+                    onValueChange={(val) => setFormData(prev => ({ ...prev, gender: val }))}
+                  >
+                    <SelectTrigger className="bg-background border-none shadow-sm focus:ring-primary/20"><SelectValue placeholder="选择性别" /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="male">男</SelectItem>
+                      <SelectItem value="female">女</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="space-y-2">
+                  <Label className="flex items-center justify-between">生日 <span className="text-destructive font-bold">*</span></Label>
+                  <div className="grid grid-cols-2 gap-2">
+                    <Select
+                      value={formData.birthday_calendar}
+                      onValueChange={(val) => setFormData(prev => {
+                        if (val === "solar") {
+                          return {
+                            ...prev,
+                            birthday_calendar: "solar",
+                            birthday: prev.birthday || prev.birthday_solar || "",
+                            birthday_solar: prev.birthday || prev.birthday_solar || "",
+                            birthday_lunar: "",
+                          }
+                        }
+                        return {
+                          ...prev,
+                          birthday_calendar: "lunar",
+                          birthday: "",
+                          birthday_solar: "",
+                          birthday_lunar: "",
+                        }
+                      })}
+                    >
+                      <SelectTrigger className="bg-background border-none shadow-sm focus-visible:ring-primary/20">
+                        <SelectValue placeholder="选择历法" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="solar">阳历</SelectItem>
+                        <SelectItem value="lunar">农历</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    {formData.birthday_calendar === "solar" ? (
+                      <Input 
+                        type="date" 
+                        className="bg-background border-none shadow-sm focus-visible:ring-primary/20 w-full min-w-0" 
+                        value={formData.birthday}
+                        onChange={(e) => setFormData(prev => ({ ...prev, birthday: e.target.value, birthday_solar: e.target.value }))}
+                      />
+                    ) : (
+                      <Input 
+                        type="date" 
+                        className="bg-background border-none shadow-sm focus-visible:ring-primary/20 w-full min-w-0" 
+                        value={formData.birthday_lunar}
+                        onChange={(e) => {
+                          const lunar = e.target.value
+                          const solar = lunar ? convertLunarToSolar(lunar) : ""
+                          setFormData(prev => ({
+                            ...prev,
+                            birthday_lunar: lunar,
+                            birthday: solar || prev.birthday,
+                            birthday_solar: solar || prev.birthday_solar,
+                          }))
+                        }}
+                        placeholder="选择农历日期"
+                      />
+                    )}
+                  </div>
+                  {formData.birthday_calendar === "lunar" && (
+                    <div className="space-y-1">
+                      <Label className="text-xs text-muted-foreground">当年对应阳历（提醒用）</Label>
+                      <Input
+                        type="date"
+                        className="bg-background border-none shadow-sm focus-visible:ring-primary/20 w-full min-w-0"
+                        value={formData.birthday || formData.birthday_solar}
+                        onChange={(e) => setFormData(prev => ({ ...prev, birthday: e.target.value, birthday_solar: e.target.value }))}
+                      />
+                      <p className="text-[10px] text-muted-foreground">农历自动转阳历；如遇闰月请手动确认阳历日期。</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+            <div className="space-y-2">
+              <Label>手机号 <span className="text-destructive font-bold">*</span></Label>
+              <Input 
+                placeholder="请输入11位手机号" 
+                className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
+                value={formData.phone}
+                onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label>身份证号 <span className="text-destructive font-bold">*</span></Label>
+              <Input 
+                placeholder="18位身份证号" 
+                className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
+                value={formData.id_card}
+                onChange={(e) => setFormData(prev => ({ ...prev, id_card: e.target.value }))}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label>员工状态 <span className="text-destructive font-bold">*</span></Label>
+              <Select 
+                value={formData.status}
+                onValueChange={(val) => setFormData(prev => ({ ...prev, status: val }))}
+              >
+                <SelectTrigger className="bg-background border-none shadow-sm focus:ring-primary/20"><SelectValue placeholder="选择状态" /></SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="在职">在职</SelectItem>
+                  <SelectItem value="试用期">试用期</SelectItem>
+                  <SelectItem value="离职">离职</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+        </div>
+
+        {/* Academic Section */}
+        <div className="space-y-4">
+          <h4 className="text-sm font-semibold flex items-center gap-2 text-foreground/70 uppercase tracking-wider">
+            <GraduationCap className="size-4 text-primary" />
+            学历与证照
+          </h4>
+          <div className="space-y-4 bg-muted/20 p-5 rounded-2xl border border-muted-foreground/10 ">
+            <div className="space-y-2">
+              <Label>最高学历</Label>
+              <Select
+                value={formData.education_level}
+                onValueChange={(val) => setFormData(prev => ({ ...prev, education_level: val }))}
+              >
+                <SelectTrigger className="bg-background border-none shadow-sm focus:ring-primary/20"><SelectValue placeholder="选择学历" /></SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="doctor">博士</SelectItem>
+                  <SelectItem value="master">硕士</SelectItem>
+                  <SelectItem value="bachelor">本科</SelectItem>
+                  <SelectItem value="college">大专</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="space-y-2">
+              <Label>毕业院校</Label>
+              <Input 
+                placeholder="请输入院校名称" 
+                className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
+                value={formData.school}
+                onChange={(e) => setFormData(prev => ({ ...prev, school: e.target.value }))}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label>专业</Label>
+              <Input 
+                placeholder="请输入专业" 
+                className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
+                value={formData.major}
+                onChange={(e) => setFormData(prev => ({ ...prev, major: e.target.value }))}
+              />
+            </div>
+            <div className="pt-2">
+              <Label className="text-xs text-muted-foreground text-center block">入职后需在档案中心上传证书扫描件</Label>
+              <div className="mt-2 border-2 border-dashed border-muted-foreground/10 rounded-xl p-6 text-center bg-background/50">
+                <FileSearch className="size-6 mx-auto text-muted-foreground/20" />
+                <span className="text-[10px] text-muted-foreground/60 mt-2 block">证书/报告后期维护</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Work Info Section */}
+        <div className="space-y-4">
+          <h4 className="text-sm font-semibold flex items-center gap-2 text-foreground/70 uppercase tracking-wider">
+            <Briefcase className="size-4 text-primary" />
+            岗位与薪资
+          </h4>
+          <div className="space-y-4 bg-muted/20 p-5 rounded-2xl border border-muted-foreground/10 ">
+            <div className="space-y-2">
+              <Label>入职部门 <span className="text-destructive font-bold">*</span></Label>
+              <Select
+                value={formData.department_id}
+                onValueChange={(val) => setFormData(prev => ({ ...prev, department_id: val }))}
+              >
+                <SelectTrigger className="bg-background border-none shadow-sm focus:ring-primary/20">
+                  <SelectValue placeholder="选择部门" />
+                </SelectTrigger>
+                <SelectContent>
+                  {flatDepts.map((d: any) => (
+                    <SelectItem key={d.id} value={d.id}>
+                      <span style={{ paddingLeft: `${d.level * 12}px` }} className="flex items-center gap-2">
+                        {d.level > 0 && <ChevronRight className="size-3 opacity-50" />}
+                        {d.name}
+                      </span>
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="space-y-2">
+              <Label>关联岗位 <span className="text-destructive font-bold">*</span></Label>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button variant="outline" className="w-full justify-between bg-background border-none shadow-sm hover:bg-background/80 font-normal">
+                    {formData.position_id ? (
+                      positions.find((p: any) => p.id === formData.position_id)?.name || "选择岗位"
+                    ) : "选择岗位"}
+                    <Search className="size-4 opacity-50" />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-[400px] p-0 overflow-hidden" align="start">
+                  <div className="p-4 border-b bg-muted/20">
+                    <h4 className="text-sm font-bold mb-2">选择岗位</h4>
+                    <div className="relative">
+                      <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
+                      <Input 
+                        placeholder="搜索岗位或部门..." 
+                        className="pl-9 bg-background border-none shadow-inner" 
+                        value={posSearch}
+                        onChange={(e) => setPosSearch(e.target.value)}
+                      />
+                    </div>
+                  </div>
+                  <ScrollArea className="h-[300px]">
+                    <div className="p-2 space-y-1">
+                      {filteredPositions.map((p: any) => (
+                        <Button
+                          key={p.id}
+                          variant="ghost"
+                          className="w-full justify-start text-left h-auto py-3 px-4 rounded-xl flex flex-col items-start gap-1"
+                          onClick={() => {
+                            setFormData(prev => ({ ...prev, position_id: p.id }))
+                          }}
+                        >
+                          <span className="font-semibold text-sm">{p.name}</span>
+                          <span className="text-[10px] text-muted-foreground bg-muted/50 px-1.5 py-0.5 rounded uppercase tracking-wider">
+                            {p.department_name || "未知部门"}
+                          </span>
+                        </Button>
+                      ))}
+                      {filteredPositions.length === 0 && (
+                        <div className="p-8 text-center text-sm text-muted-foreground italic">
+                          未找到相关岗位
+                        </div>
+                      )}
+                    </div>
+                  </ScrollArea>
+                </PopoverContent>
+              </Popover>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <Label>职级</Label>
+                <Input 
+                  placeholder="P6/M2..." 
+                  className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
+                  value={formData.level}
+                  onChange={(e) => setFormData(prev => ({ ...prev, level: e.target.value }))}
+                />
+              </div>
+              <div className="space-y-2">
+                <Label>入职日期</Label>
+                <Input 
+                  type="date" 
+                  className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
+                  value={formData.join_date}
+                  onChange={(e) => setFormData(prev => ({ ...prev, join_date: e.target.value }))}
+                />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <Label>银行卡号 (发薪)</Label>
+              <Input 
+                placeholder="输入银行卡号" 
+                className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
+                value={formData.bank_account}
+                onChange={(e) => setFormData(prev => ({ ...prev, bank_account: e.target.value }))}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label>开户行</Label>
+              <Input 
+                placeholder="例如：招商银行北京分行" 
+                className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
+                value={formData.bank_name}
+                onChange={(e) => setFormData(prev => ({ ...prev, bank_name: e.target.value }))}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Contract Section placeholder - in real app would create a contract too */}
+        <div className="space-y-4">
+          <h4 className="text-sm font-semibold flex items-center gap-2 text-foreground/70 uppercase tracking-wider">
+            <FileText className="size-4 text-primary" />
+            劳动合同
+          </h4>
+          <div className="grid grid-cols-2 gap-6 bg-muted/20 p-5 rounded-2xl border border-muted-foreground/10 ">
+            <div className="space-y-4 text-center col-span-2 py-4">
+              <p className="text-sm text-muted-foreground">员工入职后，请前往“员工档案”上传签署后的合同文件。</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Emergency Section */}
+        <div className="space-y-4">
+          <h4 className="text-sm font-semibold flex items-center gap-2 text-foreground/70 uppercase tracking-wider">
+            <Phone className="size-4 text-primary" />
+            紧急联系人
+          </h4>
+          <div className="grid grid-cols-2 gap-6 bg-muted/20 p-5 rounded-2xl border border-muted-foreground/10">
+            <div className="space-y-2">
+              <Label>联系人姓名</Label>
+              <Input 
+                placeholder="输入姓名" 
+                className="bg-background border-none shadow-sm" 
+                value={formData.emergency_contact_name}
+                onChange={(e) => setFormData(prev => ({ ...prev, emergency_contact_name: e.target.value }))}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label>联系人电话</Label>
+              <Input 
+                placeholder="输入电话" 
+                className="bg-background border-none shadow-sm" 
+                value={formData.emergency_contact_phone}
+                onChange={(e) => setFormData(prev => ({ ...prev, emergency_contact_phone: e.target.value }))}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ScrollArea>
+)
+
+const convertLunarToSolar = (lunarDate: string) => {
+  if (!lunarDate) return null
+  const [y, m, d] = lunarDate.split("-").map(Number)
+  if (!y || !m || !d) return null
+  try {
+    const res = solarlunar.lunar2solar(y, m, d, false)
+    if (!res || res === -1) return null
+    const mm = `${res.cMonth}`.padStart(2, "0")
+    const dd = `${res.cDay}`.padStart(2, "0")
+    return `${res.cYear}-${mm}-${dd}`
+  } catch (e) {
+    console.error("lunar2solar error", e)
+    return null
+  }
 }
 
 export function EmployeeModule() {
@@ -110,317 +542,30 @@ export function EmployeeModule() {
 
   const flatDepts = useMemo(() => flattenDeptTree(departmentTree), [departmentTree])
   
-  const EmployeeForm = ({ type }: { type: 'add' | 'edit' }) => (
-    <ScrollArea className="flex-1 bg-background min-h-0 overflow-y-scroll">
-      <div className="p-8 space-y-8 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Basic Info Section */}
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold flex items-center gap-2 text-foreground/70 uppercase tracking-wider">
-              <ShieldCheck className="size-4 text-primary" />
-              基本信息
-            </h4>
-            <div className="space-y-4 bg-muted/20 p-5 rounded-2xl border border-muted-foreground/10 ">
-              <div className="space-y-2">
-                <Label>工号 <span className="text-destructive font-bold">*</span></Label>
-                <Input 
-                  placeholder="EMP-2026-001" 
-                  className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
-                  value={formData.employee_id}
-                  onChange={(e) => setFormData(prev => ({ ...prev, employee_id: e.target.value }))}
-                />
-              </div>
-              <div className="space-y-2">
-                <Label>姓名 <span className="text-destructive font-bold">*</span></Label>
-                <Input 
-                  placeholder="请输入真实姓名" 
-                  className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
-                  value={formData.name}
-                  onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                />
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label>性别 <span className="text-destructive font-bold">*</span></Label>
-                  <Select 
-                    value={formData.gender}
-                    onValueChange={(val) => setFormData(prev => ({ ...prev, gender: val }))}
-                  >
-                    <SelectTrigger className="bg-background border-none shadow-sm focus:ring-primary/20"><SelectValue placeholder="选择性别" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="male">男</SelectItem>
-                      <SelectItem value="female">女</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="space-y-2">
-                  <Label>生日 <span className="text-destructive font-bold">*</span></Label>
-                  <Input 
-                    type="date" 
-                    className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
-                    value={formData.birthday}
-                    onChange={(e) => setFormData(prev => ({ ...prev, birthday: e.target.value }))}
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <Label>手机号 <span className="text-destructive font-bold">*</span></Label>
-                <Input 
-                  placeholder="请输入11位手机号" 
-                  className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
-                  value={formData.phone}
-                  onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                />
-              </div>
-              <div className="space-y-2">
-                <Label>身份证号 <span className="text-destructive font-bold">*</span></Label>
-                <Input 
-                  placeholder="18位身份证号" 
-                  className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
-                  value={formData.id_card}
-                  onChange={(e) => setFormData(prev => ({ ...prev, id_card: e.target.value }))}
-                />
-              </div>
-              <div className="space-y-2">
-                <Label>员工状态 <span className="text-destructive font-bold">*</span></Label>
-                <Select 
-                  value={formData.status}
-                  onValueChange={(val) => setFormData(prev => ({ ...prev, status: val }))}
-                >
-                  <SelectTrigger className="bg-background border-none shadow-sm focus:ring-primary/20"><SelectValue placeholder="选择状态" /></SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="在职">在职</SelectItem>
-                    <SelectItem value="试用期">试用期</SelectItem>
-                    <SelectItem value="离职">离职</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-          </div>
-
-          {/* Academic Section */}
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold flex items-center gap-2 text-foreground/70 uppercase tracking-wider">
-              <GraduationCap className="size-4 text-primary" />
-              学历与证照
-            </h4>
-            <div className="space-y-4 bg-muted/20 p-5 rounded-2xl border border-muted-foreground/10 ">
-              <div className="space-y-2">
-                <Label>最高学历</Label>
-                <Select
-                  value={formData.education_level}
-                  onValueChange={(val) => setFormData(prev => ({ ...prev, education_level: val }))}
-                >
-                  <SelectTrigger className="bg-background border-none shadow-sm focus:ring-primary/20"><SelectValue placeholder="选择学历" /></SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="doctor">博士</SelectItem>
-                    <SelectItem value="master">硕士</SelectItem>
-                    <SelectItem value="bachelor">本科</SelectItem>
-                    <SelectItem value="college">大专</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="space-y-2">
-                <Label>毕业院校</Label>
-                <Input 
-                  placeholder="请输入院校名称" 
-                  className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
-                  value={formData.school}
-                  onChange={(e) => setFormData(prev => ({ ...prev, school: e.target.value }))}
-                />
-              </div>
-              <div className="space-y-2">
-                <Label>专业</Label>
-                <Input 
-                  placeholder="请输入专业" 
-                  className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
-                  value={formData.major}
-                  onChange={(e) => setFormData(prev => ({ ...prev, major: e.target.value }))}
-                />
-              </div>
-              <div className="pt-2">
-                <Label className="text-xs text-muted-foreground text-center block">入职后需在档案中心上传证书扫描件</Label>
-                <div className="mt-2 border-2 border-dashed border-muted-foreground/10 rounded-xl p-6 text-center bg-background/50">
-                  <FileSearch className="size-6 mx-auto text-muted-foreground/20" />
-                  <span className="text-[10px] text-muted-foreground/60 mt-2 block">证书/报告后期维护</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Work Info Section */}
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold flex items-center gap-2 text-foreground/70 uppercase tracking-wider">
-              <Briefcase className="size-4 text-primary" />
-              岗位与薪资
-            </h4>
-            <div className="space-y-4 bg-muted/20 p-5 rounded-2xl border border-muted-foreground/10 ">
-              <div className="space-y-2">
-                <Label>入职部门 <span className="text-destructive font-bold">*</span></Label>
-                <Select
-                  value={formData.department_id}
-                  onValueChange={(val) => setFormData(prev => ({ ...prev, department_id: val }))}
-                >
-                  <SelectTrigger className="bg-background border-none shadow-sm focus:ring-primary/20">
-                    <SelectValue placeholder="选择部门" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {flatDepts.map((d: any) => (
-                      <SelectItem key={d.id} value={d.id}>
-                        <span style={{ paddingLeft: `${d.level * 12}px` }} className="flex items-center gap-2">
-                          {d.level > 0 && <ChevronRight className="size-3 opacity-50" />}
-                          {d.name}
-                        </span>
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="space-y-2">
-                <Label>关联岗位 <span className="text-destructive font-bold">*</span></Label>
-                <Popover>
-                  <PopoverTrigger asChild>
-                    <Button variant="outline" className="w-full justify-between bg-background border-none shadow-sm hover:bg-background/80 font-normal">
-                      {formData.position_id ? (
-                        positions.find((p: any) => p.id === formData.position_id)?.name || "选择岗位"
-                      ) : "选择岗位"}
-                      <Search className="size-4 opacity-50" />
-                    </Button>
-                  </PopoverTrigger>
-                  <PopoverContent className="w-[400px] p-0 overflow-hidden" align="start">
-                    <div className="p-4 border-b bg-muted/20">
-                      <h4 className="text-sm font-bold mb-2">选择岗位</h4>
-                      <div className="relative">
-                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
-                        <Input 
-                          placeholder="搜索岗位或部门..." 
-                          className="pl-9 bg-background border-none shadow-inner" 
-                          value={posSearch}
-                          onChange={(e) => setPosSearch(e.target.value)}
-                        />
-                      </div>
-                    </div>
-                    <ScrollArea className="h-[300px]">
-                      <div className="p-2 space-y-1">
-                        {filteredPositions.map((p: any) => (
-                          <Button
-                            key={p.id}
-                            variant="ghost"
-                            className="w-full justify-start text-left h-auto py-3 px-4 rounded-xl flex flex-col items-start gap-1"
-                            onClick={() => {
-                              setFormData(prev => ({ ...prev, position_id: p.id }))
-                            }}
-                          >
-                            <span className="font-semibold text-sm">{p.name}</span>
-                            <span className="text-[10px] text-muted-foreground bg-muted/50 px-1.5 py-0.5 rounded uppercase tracking-wider">
-                              {p.department_name || "未知部门"}
-                            </span>
-                          </Button>
-                        ))}
-                        {filteredPositions.length === 0 && (
-                          <div className="p-8 text-center text-sm text-muted-foreground italic">
-                            未找到相关岗位
-                          </div>
-                        )}
-                      </div>
-                    </ScrollArea>
-                  </PopoverContent>
-                </Popover>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label>职级</Label>
-                  <Input 
-                    placeholder="P6/M2..." 
-                    className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
-                    value={formData.level}
-                    onChange={(e) => setFormData(prev => ({ ...prev, level: e.target.value }))}
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label>入职日期</Label>
-                  <Input 
-                    type="date" 
-                    className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
-                    value={formData.join_date}
-                    onChange={(e) => setFormData(prev => ({ ...prev, join_date: e.target.value }))}
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <Label>银行卡号 (发薪)</Label>
-                <Input 
-                  placeholder="输入银行卡号" 
-                  className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
-                  value={formData.bank_account}
-                  onChange={(e) => setFormData(prev => ({ ...prev, bank_account: e.target.value }))}
-                />
-              </div>
-              <div className="space-y-2">
-                <Label>开户行</Label>
-                <Input 
-                  placeholder="例如：招商银行北京分行" 
-                  className="bg-background border-none shadow-sm focus-visible:ring-primary/20" 
-                  value={formData.bank_name}
-                  onChange={(e) => setFormData(prev => ({ ...prev, bank_name: e.target.value }))}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Contract Section placeholder - in real app would create a contract too */}
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold flex items-center gap-2 text-foreground/70 uppercase tracking-wider">
-              <FileText className="size-4 text-primary" />
-              劳动合同
-            </h4>
-            <div className="grid grid-cols-2 gap-6 bg-muted/20 p-5 rounded-2xl border border-muted-foreground/10 ">
-              <div className="space-y-4 text-center col-span-2 py-4">
-                <p className="text-sm text-muted-foreground">员工入职后，请前往“员工档案”上传签署后的合同文件。</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Emergency Section */}
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold flex items-center gap-2 text-foreground/70 uppercase tracking-wider">
-              <Phone className="size-4 text-primary" />
-              紧急联系人
-            </h4>
-            <div className="grid grid-cols-2 gap-6 bg-muted/20 p-5 rounded-2xl border border-muted-foreground/10">
-              <div className="space-y-2">
-                <Label>联系人姓名</Label>
-                <Input 
-                  placeholder="输入姓名" 
-                  className="bg-background border-none shadow-sm" 
-                  value={formData.emergency_contact_name}
-                  onChange={(e) => setFormData(prev => ({ ...prev, emergency_contact_name: e.target.value }))}
-                />
-              </div>
-              <div className="space-y-2">
-                <Label>联系人电话</Label>
-                <Input 
-                  placeholder="输入电话" 
-                  className="bg-background border-none shadow-sm" 
-                  value={formData.emergency_contact_phone}
-                  onChange={(e) => setFormData(prev => ({ ...prev, emergency_contact_phone: e.target.value }))}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </ScrollArea>
-  )
-
   const [search, setSearch] = useState("")
   const [statusFilter, setStatusFilter] = useState("all")
   const [contractSearch, setContractSearch] = useState("")
   const [archiveSearch, setArchiveSearch] = useState("")
   const [selectedEmployee, setSelectedEmployee] = useState<Employee | null>(null)
   const [isDetailOpen, setIsDetailOpen] = useState(false)
+  const getProbationEndDate = (joinDate?: string | null, months?: number | null) => {
+    if (!joinDate || !months || months <= 0) return null
+    const d = new Date(joinDate)
+    d.setMonth(d.getMonth() + months)
+    return d.toISOString().split('T')[0]
+  }
+  const getSeniorityText = (joinDate?: string | null) => {
+    if (!joinDate) return null
+    const start = new Date(joinDate)
+    const now = new Date()
+    let years = now.getFullYear() - start.getFullYear()
+    let months = now.getMonth() - start.getMonth()
+    if (months < 0) {
+      years -= 1
+      months += 12
+    }
+    return `${years}年${months}个月`
+  }
   const [isAddOpen, setIsAddOpen] = useState(false)
   const [isEditOpen, setIsEditOpen] = useState(false)
   const [activeArchiveTab, setActiveArchiveTab] = useState("basic")
@@ -443,11 +588,14 @@ export function EmployeeModule() {
   }, [employees, search, statusFilter])
 
   // Add Employee Form State
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<EmployeeFormData>({
     employee_id: "",
     name: "",
     gender: "male",
     birthday: "",
+    birthday_calendar: "solar",
+    birthday_lunar: "",
+    birthday_solar: "",
     id_card: "",
     phone: "",
     email: "",
@@ -509,6 +657,9 @@ export function EmployeeModule() {
   const [isDeleting, setIsDeleting] = useState(false)
 
   const [isContractEditOpen, setIsContractEditOpen] = useState(false)
+  const [isArchivePreviewOpen, setIsArchivePreviewOpen] = useState(false)
+  const [previewArchive, setPreviewArchive] = useState<any | null>(null)
+  const [statModal, setStatModal] = useState<{ title: string; items: string[] } | null>(null)
   const [contractSaving, setContractSaving] = useState(false)
   const [contractForm, setContractForm] = useState({
     id: "",
@@ -522,6 +673,10 @@ export function EmployeeModule() {
     file_url: "",
     file_name: "",
   })
+  const contractDialogFileInputRef = useRef<HTMLInputElement>(null)
+  const [contractUploading, setContractUploading] = useState(false)
+  const [isContractPreviewOpen, setIsContractPreviewOpen] = useState(false)
+  const [previewContract, setPreviewContract] = useState<any | null>(null)
 
   const educationLabelMap: Record<string, string> = {
     doctor: "博士",
@@ -556,10 +711,17 @@ export function EmployeeModule() {
 
     setSaving(true)
     try {
+      const payload = {
+        ...formData,
+        birthday_calendar: formData.birthday_calendar || "solar",
+        birthday_lunar: formData.birthday_calendar === "lunar" ? (formData.birthday_lunar || null) : null,
+        birthday_solar: formData.birthday_calendar === "lunar" ? (formData.birthday || null) : null,
+        birthday: formData.birthday_calendar === "lunar" ? (formData.birthday || null) : formData.birthday,
+      }
       const res = await fetch("/api/employees", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       })
       if (!res.ok) throw new Error("Failed to add employee")
       
@@ -571,6 +733,9 @@ export function EmployeeModule() {
         name: "",
         gender: "male",
         birthday: "",
+        birthday_calendar: "solar",
+        birthday_lunar: "",
+        birthday_solar: "",
         id_card: "",
         phone: "",
         email: "",
@@ -604,10 +769,18 @@ export function EmployeeModule() {
 
     setSaving(true)
     try {
+      const payload = {
+        ...formData,
+        id: selectedEmployee?.id,
+        birthday_calendar: formData.birthday_calendar || "solar",
+        birthday_lunar: formData.birthday_calendar === "lunar" ? (formData.birthday_lunar || null) : null,
+        birthday_solar: formData.birthday_calendar === "lunar" ? (formData.birthday || null) : null,
+        birthday: formData.birthday_calendar === "lunar" ? (formData.birthday || null) : formData.birthday,
+      }
       const res = await fetch("/api/employees", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, id: selectedEmployee?.id }),
+        body: JSON.stringify(payload),
       })
       if (!res.ok) throw new Error("Failed to update employee")
       
@@ -628,6 +801,9 @@ export function EmployeeModule() {
       name: emp.name,
       gender: emp.gender,
       birthday: emp.birthday || "",
+      birthday_calendar: emp.birthday_calendar || "solar",
+      birthday_lunar: emp.birthday_lunar || "",
+      birthday_solar: emp.birthday_solar || "",
       id_card: emp.id_card || "",
       phone: emp.phone || "",
       email: emp.email || "",
@@ -705,6 +881,7 @@ export function EmployeeModule() {
       if (category === "签署协议") {
         const existingContract = contracts?.[0]
         if (existingContract) {
+          const sanitizedEndDate = existingContract.contract_type === "无固定期限" || !existingContract.end_date ? null : existingContract.end_date
           await fetch("/api/employee-contracts", {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
@@ -713,7 +890,7 @@ export function EmployeeModule() {
               employee_id: selectedEmployee.id,
               contract_type: existingContract.contract_type || "劳动合同",
               start_date: existingContract.start_date,
-              end_date: existingContract.end_date,
+              end_date: sanitizedEndDate,
               probation_months: existingContract.probation_months ?? 0,
               renew_count: existingContract.renew_count ?? 0,
               status: existingContract.status || "生效中",
@@ -753,8 +930,114 @@ export function EmployeeModule() {
     }
   }
 
+  const handleContractFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file || !contractForm.employee_id) return
+    const employee = employees.find(emp => emp.id === contractForm.employee_id)
+    const safeEmployeeId = (employee?.employee_id || "employee").replace(/[^a-zA-Z0-9-]/g, '_')
+    const fileExt = file.name.split('.').pop()
+    const fileName = `${Math.random().toString(36).substring(2)}-${Date.now()}.${fileExt}`
+    const filePath = `employees/${safeEmployeeId}/contracts/${fileName}`
+    setContractUploading(true)
+    try {
+      const { error: uploadError } = await supabase.storage
+        .from('employee-docs')
+        .upload(filePath, file, { upsert: true })
+      if (uploadError) {
+        if (uploadError.message.includes('Bucket not found')) {
+          throw new Error('存储桶 "employee-docs" 未找到，请在 Supabase 控制台创建。')
+        }
+        throw uploadError
+      }
+      const { data: { publicUrl } } = supabase.storage
+        .from('employee-docs')
+        .getPublicUrl(filePath)
+      const updated = { ...contractForm, file_url: publicUrl, file_name: file.name }
+      setContractForm(updated)
+
+      await fetch("/api/employee-archives", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          employee_id: contractForm.employee_id,
+          category: "签署协议",
+          file_name: file.name,
+          file_url: publicUrl,
+          file_type: fileExt
+        }),
+      })
+      await mutateArchives?.()
+      await mutateAllArchives?.()
+
+      if (contractForm.id) {
+        const payload = {
+          ...updated,
+          id: contractForm.id,
+          employee_id: contractForm.employee_id,
+          end_date: updated.contract_type === "无固定期限" || !updated.end_date ? null : updated.end_date,
+        }
+        await fetch("/api/employee-contracts", {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        })
+        await mutateContract?.()
+        await mutateAllContracts?.()
+      }
+    } catch (error) {
+      console.error(error)
+      alert('上传合同文件失败')
+    } finally {
+      setContractUploading(false)
+      if (contractDialogFileInputRef.current) contractDialogFileInputRef.current.value = ''
+    }
+  }
+
+  const handleDeleteContract = async (id: string) => {
+    try {
+      await fetch(`/api/employee-contracts?id=${id}`, { method: 'DELETE' })
+      await mutateContract?.()
+      await mutateAllContracts?.()
+    } catch (err) {
+      console.error(err)
+      alert('删除合同失败')
+    }
+  }
+
+  const handleDeleteArchive = async (id: string) => {
+    try {
+      await fetch(`/api/employee-archives?id=${id}`, { method: 'DELETE' })
+      await mutateArchives?.()
+      await mutateAllArchives?.()
+    } catch (err) {
+      console.error(err)
+      alert('删除档案失败')
+    }
+  }
+
   return (
     <div className="flex flex-col gap-6">
+      <style jsx global>{`
+        .custom-scroll {
+          scrollbar-width: thin;
+          scrollbar-color: #cbd5e1 transparent;
+        }
+        .custom-scroll::-webkit-scrollbar {
+          width: 8px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+          background: #cbd5e1;
+          border-radius: 999px;
+          border: 2px solid transparent;
+          background-clip: padding-box;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb:hover {
+          background: #94a3b8;
+        }
+      `}</style>
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-semibold text-foreground tracking-tight">员工档案中心</h1>
@@ -771,7 +1054,36 @@ export function EmployeeModule() {
             <Download className="mr-2 size-4 text-primary" />
             导出Excel
           </Button>
-          <Dialog open={isAddOpen} onOpenChange={setIsAddOpen}>
+          <Dialog open={isAddOpen} onOpenChange={(open) => {
+            if (open) {
+              setFormData({
+                employee_id: "",
+                name: "",
+                gender: "male",
+                birthday: "",
+                birthday_calendar: "solar",
+                birthday_lunar: "",
+                birthday_solar: "",
+                id_card: "",
+                phone: "",
+                email: "",
+                education_level: "bachelor",
+                school: "",
+                major: "",
+                department_id: "",
+                position_id: "",
+                level: "",
+                join_date: new Date().toISOString().split('T')[0],
+                status: "试用期",
+                bank_account: "",
+                bank_name: "",
+                emergency_contact_name: "",
+                emergency_contact_phone: "",
+                address: ""
+              })
+            }
+            setIsAddOpen(open)
+          }}>
             <DialogTrigger asChild>
               <Button size="sm" className="h-9 px-4 bg-primary shadow-lg shadow-primary/20">
                 <Plus className="mr-2 size-4" />
@@ -790,7 +1102,16 @@ export function EmployeeModule() {
                   </div>
                 </div>
               </DialogHeader>
-              <EmployeeForm type="add" />
+              <EmployeeForm 
+                type="add" 
+                formData={formData} 
+                setFormData={setFormData} 
+                flatDepts={flatDepts} 
+                positions={positions} 
+                posSearch={posSearch} 
+                setPosSearch={setPosSearch} 
+                filteredPositions={filteredPositions} 
+              />
               <DialogFooter className="p-6 bg-muted/20 border-t flex items-center justify-between gap-4">
                 <p className="text-xs text-muted-foreground italic flex-1">注：系统将根据生日自动关联员工关怀，提前30天提醒合同续签。</p>
                 <div className="flex gap-3">
@@ -821,7 +1142,16 @@ export function EmployeeModule() {
                   </div>
                 </div>
               </DialogHeader>
-              <EmployeeForm type="edit" />
+              <EmployeeForm 
+                type="edit" 
+                formData={formData} 
+                setFormData={setFormData} 
+                flatDepts={flatDepts} 
+                positions={positions} 
+                posSearch={posSearch} 
+                setPosSearch={setPosSearch} 
+                filteredPositions={filteredPositions} 
+              />
               <DialogFooter className="p-6 bg-muted/20 border-t flex items-center justify-between gap-4">
                 <p className="text-xs text-muted-foreground italic flex-1">注：修改敏感信息（如银行卡、薪资）可能需要二次审批。</p>
                 <div className="flex gap-3">
@@ -842,67 +1172,91 @@ export function EmployeeModule() {
       </div>
 
       {/* Stats Section */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-4 lg:grid-cols-5">
-        {[
-          { 
-            label: "在职员工", 
-            value: employees.filter((e: Employee) => e.status === "在职").length, 
-            icon: <Users className="size-5" />, 
-            color: "bg-success/10 text-success border-success/20" 
-          },
-          { 
-            label: "试用期", 
-            value: employees.filter((e: Employee) => e.status === "试用期").length, 
-            icon: <Clock className="size-5" />, 
-            color: "bg-warning/10 text-warning border-warning/20" 
-          },
-          { 
-            label: "本月待转正", 
-            value: employees.filter((e: Employee) => {
-              if (e.status !== "试用期" || !e.join_date) return false
-              const joinDate = new Date(e.join_date)
-              const now = new Date()
-              // Assume 3 months probation for this stat calculation
-              const probationEnd = new Date(joinDate.setMonth(joinDate.getMonth() + 3))
-              return probationEnd.getMonth() === now.getMonth() && probationEnd.getFullYear() === now.getFullYear()
-            }).length, 
-            icon: <ShieldCheck className="size-5" />, 
-            color: "bg-primary/10 text-primary border-primary/20" 
-          },
-          { 
-            label: "本月生日", 
-            value: employees.filter((e: Employee) => {
-              if (!e.birthday) return false
-              const birthday = new Date(e.birthday)
-              return birthday.getMonth() === new Date().getMonth()
-            }).length, 
-            icon: <Cake className="size-5" />, 
-            color: "bg-pink-50 text-pink-500 border-pink-100" 
-          },
-          { 
-            label: "即将到期合同", 
-            value: allContracts.filter((c: any) => {
-              if (!c.end_date || c.status !== "生效中") return false
-              const endDate = new Date(c.end_date)
-              const now = new Date()
-              const diffTime = endDate.getTime() - now.getTime()
-              const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
-              return diffDays > 0 && diffDays <= 30
-            }).length, 
-            icon: <FileText className="size-5" />, 
-            color: "bg-destructive/10 text-destructive border-destructive/20" 
-          },
-        ].map(s => (
-          <Card key={s.label} className={`border ${s.color} shadow-sm overflow-hidden`}>
-            <CardContent className="p-5 flex items-center gap-4">
-              <div className="p-2.5 rounded-xl bg-background/80 shadow-sm">{s.icon}</div>
-              <div className="flex flex-col">
-                <span className="text-[11px] font-bold uppercase tracking-wider opacity-60 leading-none mb-1.5">{s.label}</span>
-                <span className="text-2xl font-black">{s.value}</span>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-4 lg:grid-cols-6">
+        {(() => {
+          const now = new Date()
+          const probationThisMonth = employees.filter((e: Employee) => {
+            if (e.status !== "试用期" || !e.join_date) return false
+            const probationEnd = new Date(e.join_date)
+            probationEnd.setMonth(probationEnd.getMonth() + 3)
+            return probationEnd.getMonth() === now.getMonth() && probationEnd.getFullYear() === now.getFullYear()
+          })
+          const birthdayThisMonth = employees.filter((e: Employee) => {
+            if (!e.birthday) return false
+            const birthday = new Date(e.birthday)
+            return birthday.getMonth() === now.getMonth()
+          })
+          const anniversaryThisMonth = employees.filter((e: Employee) => {
+            if (!e.join_date) return false
+            const join = new Date(e.join_date)
+            return join.getMonth() === now.getMonth()
+          })
+          const contractExpiring = allContracts.filter((c: any) => {
+            if (!c.end_date || c.status !== "生效中") return false
+            const endDate = new Date(c.end_date)
+            const diffDays = Math.ceil((endDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24))
+            return diffDays > 0 && diffDays <= 30
+          })
+
+          const statItems = [
+            {
+              label: "在职员工",
+              value: employees.filter((e: Employee) => e.status === "在职").length,
+              icon: <Users className="size-5" />,
+              color: "bg-success/10 text-success border-success/20",
+              list: employees.filter((e: Employee) => e.status === "在职").map(e => `${e.name} (${e.employee_id})`),
+            },
+            {
+              label: "试用期",
+              value: employees.filter((e: Employee) => e.status === "试用期").length,
+              icon: <Clock className="size-5" />,
+              color: "bg-warning/10 text-warning border-warning/20",
+              list: employees.filter((e: Employee) => e.status === "试用期").map(e => `${e.name} (${e.employee_id})`),
+            },
+            {
+              label: "本月待转正",
+              value: probationThisMonth.length,
+              icon: <ShieldCheck className="size-5" />,
+              color: "bg-primary/10 text-primary border-primary/20",
+              list: probationThisMonth.map(e => `${e.name} (${e.employee_id})`),
+            },
+            {
+              label: "本月司龄周年",
+              value: anniversaryThisMonth.length,
+              icon: <History className="size-5" />,
+              color: "bg-emerald-50 text-emerald-600 border-emerald-100",
+              list: anniversaryThisMonth.map(e => `${e.name} (${e.employee_id}) 入职于 ${e.join_date}`),
+            },
+            {
+              label: "本月生日",
+              value: birthdayThisMonth.length,
+              icon: <Cake className="size-5" />,
+              color: "bg-pink-50 text-pink-500 border-pink-100",
+              list: birthdayThisMonth.map(e => `${e.name} (${e.employee_id}) 生日 ${e.birthday?.slice(5)}`),
+            },
+            {
+              label: "即将到期合同",
+              value: contractExpiring.length,
+              icon: <FileText className="size-5" />,
+              color: "bg-destructive/10 text-destructive border-destructive/20",
+              list: contractExpiring.map(c => {
+                const emp = employees.find(e => e.id === c.employee_id)
+                return `${emp?.name || '未知员工'} (${emp?.employee_id || '-'}) 合同至 ${c.end_date}`
+              }),
+            },
+          ]
+          return statItems.map(s => (
+            <Card key={s.label} className={`border ${s.color} shadow-sm overflow-hidden cursor-pointer`} onClick={() => setStatModal({ title: s.label, items: s.list })}>
+              <CardContent className="p-5 flex items-center gap-4">
+                <div className="p-2.5 rounded-xl bg-background/80 shadow-sm">{s.icon}</div>
+                <div className="flex flex-col">
+                  <span className="text-[11px] font-bold uppercase tracking-wider opacity-60 leading-none mb-1.5">{s.label}</span>
+                  <span className="text-2xl font-black">{s.value}</span>
+                </div>
+              </CardContent>
+            </Card>
+          ))
+        })()}
       </div>
 
       <Tabs defaultValue="employees" className="mt-2">
@@ -1021,7 +1375,7 @@ export function EmployeeModule() {
                                 <AlertDialogCancel>取消</AlertDialogCancel>
                                 <AlertDialogAction 
                                   onClick={() => handleDeleteEmployee(emp.id)}
-                                  className="bg-destructive hover:bg-destructive/90 text-destructive-foreground"
+                                  className="bg-destructive hover:bg-destructive/90 text-white"
                                   disabled={isDeleting}
                                 >
                                   {isDeleting ? <Loader2 className="mr-2 size-4 animate-spin" /> : null}
@@ -1094,33 +1448,65 @@ export function EmployeeModule() {
                       <TableCell className="text-center">
                         <Badge variant="outline" className="text-[10px] bg-primary/5 text-primary border-primary/20">{c.status}</Badge>
                       </TableCell>
-                      <TableCell className="text-right pr-6">
-                                    <Button variant="ghost" size="icon" className="size-8 rounded-lg" asChild>
-                                      <a href={c.file_url || "#"} target="_blank" rel="noreferrer" aria-label="预览合同" title="预览合同"><Eye className="size-4" /></a>
-                                    </Button>
-                                    <Button
-                                      variant="ghost"
-                                      size="icon"
-                                      className="size-8 rounded-lg"
-                                      onClick={() => {
-                                        setContractForm({
-                                          id: c.id,
-                                          employee_id: c.employee_id,
-                                          contract_type: c.contract_type || "劳动合同",
-                                          start_date: c.start_date || "",
-                                          end_date: c.end_date || "",
-                                          probation_months: c.probation_months ?? 0,
-                                          renew_count: c.renew_count ?? 0,
-                                          status: c.status || "生效中",
-                                          file_url: c.file_url || "",
-                                          file_name: c.file_name || "",
-                                        })
-                                        setIsContractEditOpen(true)
-                                      }}
-                                    >
-                                      <Edit className="size-4" />
-                                    </Button>
-
+                      <TableCell className="text-right pr-6 flex items-center justify-end gap-1">
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="size-8 rounded-lg"
+                          onClick={() => {
+                            setPreviewContract(c)
+                            setIsContractPreviewOpen(true)
+                          }}
+                          aria-label="预览合同信息"
+                          title="预览合同信息"
+                        >
+                          <Eye className="size-4" />
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="size-8 rounded-lg"
+                          onClick={() => {
+                            setContractForm({
+                              id: c.id,
+                              employee_id: c.employee_id,
+                              contract_type: c.contract_type || "劳动合同",
+                              start_date: c.start_date || "",
+                              end_date: c.end_date || "",
+                              probation_months: c.probation_months ?? 0,
+                              renew_count: c.renew_count ?? 0,
+                              status: c.status || "生效中",
+                              file_url: c.file_url || "",
+                              file_name: c.file_name || "",
+                            })
+                            setIsContractEditOpen(true)
+                          }}
+                        >
+                          <Edit className="size-4" />
+                        </Button>
+                        <AlertDialog>
+                          <AlertDialogTrigger asChild>
+                            <Button
+                              variant="ghost"
+                              size="icon"
+                              className="size-8 rounded-lg text-destructive hover:text-destructive"
+                              title="删除合同"
+                              aria-label="删除合同"
+                            >
+                              <Trash2 className="size-4" />
+                            </Button>
+                          </AlertDialogTrigger>
+                          <AlertDialogContent>
+                            <AlertDialogHeader>
+                              <AlertDialogTitle>确认删除该合同？</AlertDialogTitle>
+                              <AlertDialogDescription>删除后不可恢复，将移除员工 {c.employees?.name || "该员工"} 的合同记录及文件 {c.file_name || "未命名文件"}。</AlertDialogDescription>
+                            </AlertDialogHeader>
+                            <AlertDialogFooter>
+                              <AlertDialogCancel>取消</AlertDialogCancel>
+                              <AlertDialogAction onClick={() => handleDeleteContract(c.id)} className="bg-destructive text-white font-semibold hover:bg-destructive/90">确认删除</AlertDialogAction>
+                            </AlertDialogFooter>
+                          </AlertDialogContent>
+                        </AlertDialog>
                       </TableCell>
                     </TableRow>
                   ))}
@@ -1141,78 +1527,132 @@ export function EmployeeModule() {
         </TabsContent>
 
         <Dialog open={isContractEditOpen} onOpenChange={setIsContractEditOpen}>
-          <DialogContent className="sm:max-w-[480px] p-6">
-            <DialogHeader>
-              <DialogTitle>编辑合同信息</DialogTitle>
-              <DialogDescription>修改合同元数据并保存。</DialogDescription>
-            </DialogHeader>
-            <div className="space-y-4 py-2">
-              <div className="space-y-2">
-                <Label>合同类型</Label>
-                <Input value={contractForm.contract_type} onChange={(e) => setContractForm(prev => ({ ...prev, contract_type: e.target.value }))} />
-              </div>
-              <div className="grid grid-cols-2 gap-4">
+          <DialogContent className="sm:max-w-[720px] p-0 overflow-hidden">
+            <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-transparent px-6 py-4 border-b">
+              <DialogHeader className="space-y-1">
+                <DialogTitle className="text-xl font-bold tracking-tight flex items-center gap-2">
+                  <FileText className="size-5 text-primary" /> 编辑合同信息
+                </DialogTitle>
+                <DialogDescription>修改合同元数据并保存，选择无固定期限可留空结束日期。</DialogDescription>
+              </DialogHeader>
+            </div>
+            <div className="p-6 pt-4">
+              <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label>开始日期</Label>
-                  <Input type="date" value={contractForm.start_date || ''} onChange={(e) => setContractForm(prev => ({ ...prev, start_date: e.target.value }))} />
+                  <Label>合同类型</Label>
+                  <Select
+                    value={contractForm.contract_type}
+                    onValueChange={(val) => setContractForm(prev => ({ ...prev, contract_type: val, end_date: val === "无固定期限" ? "" : prev.end_date }))}
+                  >
+                    <SelectTrigger className="bg-background border border-muted/40 shadow-inner">
+                      <SelectValue placeholder="选择合同类型" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="固定期限">固定期限</SelectItem>
+                      <SelectItem value="无固定期限">无固定期限</SelectItem>
+                      <SelectItem value="项目制">项目制</SelectItem>
+                      <SelectItem value="实习">实习</SelectItem>
+                      <SelectItem value="劳动合同">劳动合同</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="space-y-2">
+                    <Label>开始日期</Label>
+                    <Input type="date" className="bg-background border border-muted/40" value={contractForm.start_date || ''} onChange={(e) => setContractForm(prev => ({ ...prev, start_date: e.target.value }))} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label>结束日期</Label>
+                    <Input 
+                      type="date" 
+                      className="bg-background border border-muted/40"
+                      disabled={contractForm.contract_type === "无固定期限"}
+                      placeholder={contractForm.contract_type === "无固定期限" ? "无固定期限" : "选择结束日期"}
+                      value={contractForm.contract_type === "无固定期限" ? "" : (contractForm.end_date || '')}
+                      onChange={(e) => setContractForm(prev => ({ ...prev, end_date: e.target.value }))} 
+                    />
+                    {contractForm.contract_type === "无固定期限" && (
+                      <p className="text-[10px] text-muted-foreground">已选择无固定期限，无需设置结束日期。</p>
+                    )}
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="space-y-2">
+                    <Label>试用期(月)</Label>
+                    <Input type="number" className="bg-background border border-muted/40" value={contractForm.probation_months} onChange={(e) => setContractForm(prev => ({ ...prev, probation_months: Number(e.target.value) }))} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label>续签次数</Label>
+                    <Input type="number" className="bg-background border border-muted/40" value={contractForm.renew_count} onChange={(e) => setContractForm(prev => ({ ...prev, renew_count: Number(e.target.value) }))} />
+                  </div>
                 </div>
                 <div className="space-y-2">
-                  <Label>结束日期</Label>
-                  <Input type="date" value={contractForm.end_date || ''} onChange={(e) => setContractForm(prev => ({ ...prev, end_date: e.target.value }))} />
+                  <Label>状态</Label>
+                  <Select value={contractForm.status} onValueChange={(val) => setContractForm(prev => ({ ...prev, status: val }))}>
+                    <SelectTrigger className="bg-background border border-muted/40 shadow-inner">
+                      <SelectValue placeholder="选择状态" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="生效中">生效中</SelectItem>
+                      <SelectItem value="已过期">已过期</SelectItem>
+                      <SelectItem value="已终止">已终止</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label>试用期(月)</Label>
-                  <Input type="number" value={contractForm.probation_months} onChange={(e) => setContractForm(prev => ({ ...prev, probation_months: Number(e.target.value) }))} />
+                <div className="space-y-2 md:col-span-2">
+                  <Label>合同文件</Label>
+                  <div className="flex items-center gap-2">
+                    <Input readOnly value={contractForm.file_name || "未上传"} className="bg-background border border-muted/40" />
+                    <input
+                      type="file"
+                      ref={contractDialogFileInputRef}
+                      className="hidden"
+                      onChange={handleContractFileUpload}
+                    />
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      onClick={() => contractDialogFileInputRef.current?.click()}
+                      disabled={contractUploading}
+                    >
+                      {contractUploading ? <Loader2 className="mr-2 size-4 animate-spin" /> : <Upload className="mr-2 size-4" />}
+                      上传
+                    </Button>
+                  </div>
+                  <p className="text-[10px] text-muted-foreground">上传后自动同步至合同表并更新员工档案。</p>
                 </div>
-                <div className="space-y-2">
-                  <Label>续签次数</Label>
-                  <Input type="number" value={contractForm.renew_count} onChange={(e) => setContractForm(prev => ({ ...prev, renew_count: Number(e.target.value) }))} />
+                <div className="space-y-2 md:col-span-2">
+                  <Label>合同文件链接</Label>
+                  <Input className="bg-background border border-muted/40" value={contractForm.file_url} onChange={(e) => setContractForm(prev => ({ ...prev, file_url: e.target.value }))} />
+                  {contractForm.file_url && (
+                    <Button variant="link" size="sm" className="px-0" onClick={() => {
+                      setPreviewContract(contractForm)
+                      setIsContractPreviewOpen(true)
+                    }}>
+                      预览合同文件
+                    </Button>
+                  )}
                 </div>
-              </div>
-              <div className="space-y-2">
-                <Label>状态</Label>
-                <Select value={contractForm.status} onValueChange={(val) => setContractForm(prev => ({ ...prev, status: val }))}>
-                  <SelectTrigger className="bg-background border-none shadow-inner">
-                    <SelectValue placeholder="选择状态" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="生效中">生效中</SelectItem>
-                    <SelectItem value="已过期">已过期</SelectItem>
-                    <SelectItem value="已终止">已终止</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="space-y-2">
-                <Label>合同文件名称</Label>
-                <Input value={contractForm.file_name} onChange={(e) => setContractForm(prev => ({ ...prev, file_name: e.target.value }))} />
-              </div>
-              <div className="space-y-2">
-                <Label>合同文件链接</Label>
-                <Input value={contractForm.file_url} onChange={(e) => setContractForm(prev => ({ ...prev, file_url: e.target.value }))} />
-                {contractForm.file_url && (
-                  <Button variant="link" size="sm" className="px-0" asChild>
-                    <a href={contractForm.file_url} target="_blank" rel="noreferrer">预览当前文件</a>
-                  </Button>
-                )}
               </div>
             </div>
-            <DialogFooter className="gap-3">
+            <DialogFooter className="bg-muted/30 px-6 py-4 gap-3 border-t">
               <Button variant="ghost" onClick={() => setIsContractEditOpen(false)}>取消</Button>
               <Button
                 onClick={async () => {
                   if (!contractForm.id) return
                   setContractSaving(true)
                   try {
+                    const payload = {
+                      ...contractForm,
+                      id: contractForm.id,
+                      employee_id: contractForm.employee_id,
+                      end_date: contractForm.contract_type === "无固定期限" || !contractForm.end_date ? null : contractForm.end_date,
+                    }
                     await fetch("/api/employee-contracts", {
                       method: "PUT",
                       headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify({
-                        ...contractForm,
-                        id: contractForm.id,
-                        employee_id: contractForm.employee_id,
-                      }),
+                      body: JSON.stringify(payload),
                     })
                     await mutateContract?.()
                     await mutateAllContracts?.()
@@ -1230,6 +1670,140 @@ export function EmployeeModule() {
                 保存
               </Button>
             </DialogFooter>
+          </DialogContent>
+        </Dialog>
+
+        <Dialog open={isContractPreviewOpen} onOpenChange={setIsContractPreviewOpen}>
+          <DialogContent className="sm:max-w-[900px] max-h-[92vh] overflow-hidden p-0 bg-background">
+            <div className="px-6 py-4 border-b bg-background flex items-start gap-3">
+              <div>
+                <DialogTitle className="text-xl font-bold tracking-tight flex items-center gap-2">
+                  <FileText className="size-5 text-primary" /> 合同信息预览
+                </DialogTitle>
+                <DialogDescription className="text-sm mt-0.5">查看合同元数据及文件预览。</DialogDescription>
+              </div>
+            </div>
+
+            {previewContract ? (
+              <div className="p-6 pt-4 space-y-5 overflow-y-auto custom-scroll pr-2" style={{ maxHeight: "calc(92vh - 64px)" }}>
+                <div className="grid md:grid-cols-2 gap-4 text-sm">
+                  <div className="p-4 rounded-2xl bg-background border border-muted/40 shadow-sm">
+                    <p className="text-[11px] uppercase tracking-wider text-muted-foreground">员工</p>
+                    <p className="text-lg font-bold mt-1">{employees.find(e => e.id === previewContract.employee_id)?.name || '未知员工'} <span className="text-xs text-muted-foreground font-mono">({employees.find(e => e.id === previewContract.employee_id)?.employee_id || '未知工号'})</span></p>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-background border border-muted/40 shadow-sm">
+                    <p className="text-[11px] uppercase tracking-wider text-muted-foreground">合同类型</p>
+                    <p className="text-lg font-bold mt-1">{previewContract.contract_type}</p>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-background border border-muted/40 shadow-sm">
+                    <p className="text-[11px] uppercase tracking-wider text-muted-foreground">开始日期</p>
+                    <p className="text-base font-semibold font-mono mt-1">{previewContract.start_date || '-'}</p>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-background border border-muted/40 shadow-sm">
+                    <p className="text-[11px] uppercase tracking-wider text-muted-foreground">结束日期</p>
+                    <p className="text-base font-semibold font-mono mt-1">{previewContract.end_date || '无固定期限'}</p>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-background border border-muted/40 shadow-sm">
+                    <p className="text-[11px] uppercase tracking-wider text-muted-foreground">试用期(月)</p>
+                    <p className="text-base font-semibold mt-1">{previewContract.probation_months}</p>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-background border border-muted/40 shadow-sm">
+                    <p className="text-[11px] uppercase tracking-wider text-muted-foreground">续签次数</p>
+                    <p className="text-base font-semibold mt-1">{previewContract.renew_count}</p>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-background border border-muted/40 shadow-sm">
+                    <p className="text-[11px] uppercase tracking-wider text-muted-foreground">状态</p>
+                    <Badge variant="outline" className="mt-2 text-[12px] bg-primary/10 text-primary border-primary/20">{previewContract.status}</Badge>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-background border border-muted/40 shadow-sm">
+                    <p className="text-[11px] uppercase tracking-wider text-muted-foreground">合同文件</p>
+                    <p className="text-base font-semibold mt-1 truncate">{previewContract.file_name || '未上传'}</p>
+                  </div>
+                </div>
+
+                {previewContract.file_url ? (
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-sm font-bold">合同文件预览</p>
+                        <p className="text-xs text-muted-foreground">支持 PDF 内嵌查看，必要时可在新标签打开。</p>
+                      </div>
+                      <Button variant="outline" size="sm" asChild>
+                        <a href={previewContract.file_url} target="_blank" rel="noreferrer">在新标签打开</a>
+                      </Button>
+                    </div>
+                    <div className="rounded-2xl border bg-background shadow-inner overflow-hidden ring-1 ring-muted/40" style={{ height: "540px" }}>
+                      <iframe src={previewContract.file_url} className="w-full h-full" title="合同文件预览" />
+                    </div>
+                  </div>
+                ) : (
+                  <p className="text-sm text-muted-foreground">暂无合同文件可预览。</p>
+                )}
+              </div>
+            ) : (
+              <div className="p-6">
+                <p className="text-sm text-muted-foreground">请选择合同后查看详情。</p>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
+
+        <Dialog open={isArchivePreviewOpen} onOpenChange={setIsArchivePreviewOpen}>
+          <DialogContent className="sm:max-w-[900px] max-h-[92vh] overflow-hidden p-0 bg-background">
+            <div className="px-6 py-4 border-b bg-background flex items-start gap-3">
+              <div>
+                <DialogTitle className="text-xl font-bold tracking-tight flex items-center gap-2">
+                  <FolderOpen className="size-5 text-primary" /> 文件预览
+                </DialogTitle>
+                <DialogDescription className="text-sm mt-0.5">在弹窗内预览档案文件，可选择新标签打开。</DialogDescription>
+              </div>
+            </div>
+
+            {previewArchive ? (
+              <div className="p-6 pt-4 space-y-4 overflow-y-auto custom-scroll pr-2" style={{ maxHeight: "calc(92vh - 64px)" }}>
+                <div className="grid md:grid-cols-2 gap-4 text-sm">
+                  <div className="p-4 rounded-2xl bg-background border border-muted/40 shadow-sm">
+                    <p className="text-[11px] uppercase tracking-wider text-muted-foreground">员工</p>
+                    <p className="text-lg font-bold mt-1">{previewArchive.employees?.name || '未知员工'} <span className="text-xs text-muted-foreground font-mono">({previewArchive.employees?.employee_id || '未知工号'})</span></p>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-background border border-muted/40 shadow-sm">
+                    <p className="text-[11px] uppercase tracking-wider text-muted-foreground">分类</p>
+                    <p className="text-lg font-bold mt-1">{previewArchive.category}</p>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-background border border-muted/40 shadow-sm">
+                    <p className="text-[11px] uppercase tracking-wider text-muted-foreground">文件名</p>
+                    <p className="text-base font-semibold mt-1 truncate">{previewArchive.file_name}</p>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-background border border-muted/40 shadow-sm">
+                    <p className="text-[11px] uppercase tracking-wider text-muted-foreground">上传日期</p>
+                    <p className="text-base font-semibold mt-1 font-mono">{new Date(previewArchive.created_at).toLocaleString()}</p>
+                  </div>
+                </div>
+
+                {previewArchive.file_url ? (
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-sm font-bold">文件预览</p>
+                        <p className="text-xs text-muted-foreground">支持常见 PDF/图片预览；若无法加载，可在新标签打开。</p>
+                      </div>
+                      <Button variant="outline" size="sm" asChild>
+                        <a href={previewArchive.file_url} target="_blank" rel="noreferrer">在新标签打开</a>
+                      </Button>
+                    </div>
+                    <div className="rounded-2xl border bg-background shadow-inner overflow-hidden ring-1 ring-muted/40" style={{ height: "540px" }}>
+                      <iframe src={previewArchive.file_url} className="w-full h-full" title="档案文件预览" />
+                    </div>
+                  </div>
+                ) : (
+                  <p className="text-sm text-muted-foreground">暂无文件可预览。</p>
+                )}
+              </div>
+            ) : (
+              <div className="p-6">
+                <p className="text-sm text-muted-foreground">请选择文件后查看详情。</p>
+              </div>
+            )}
           </DialogContent>
         </Dialog>
 
@@ -1275,12 +1849,45 @@ export function EmployeeModule() {
                       <TableCell className="text-sm font-mono text-muted-foreground">{new Date(a.created_at).toLocaleDateString()}</TableCell>
                       <TableCell className="text-right pr-6">
                         <div className="flex items-center justify-end gap-1">
-                          <Button variant="ghost" size="icon" className="size-8 rounded-lg" asChild>
-                            <a href={a.file_url} target="_blank" rel="noreferrer" aria-label="预览文件" title="预览文件"><Eye className="size-4" /></a>
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="size-8 rounded-lg"
+                            onClick={() => {
+                              setPreviewArchive(a)
+                              setIsArchivePreviewOpen(true)
+                            }}
+                            aria-label="预览文件"
+                            title="预览文件"
+                          >
+                            <Eye className="size-4" />
                           </Button>
                           <Button variant="ghost" size="icon" className="size-8 rounded-lg" asChild>
                             <a href={a.file_url} download aria-label="下载文件" title="下载文件"><Download className="size-4" /></a>
                           </Button>
+                          <AlertDialog>
+                            <AlertDialogTrigger asChild>
+                              <Button
+                                variant="ghost"
+                                size="icon"
+                                className="size-8 rounded-lg text-destructive hover:text-destructive"
+                                title="删除文件"
+                                aria-label="删除文件"
+                              >
+                                <Trash2 className="size-4" />
+                              </Button>
+                            </AlertDialogTrigger>
+                            <AlertDialogContent>
+                              <AlertDialogHeader>
+                                <AlertDialogTitle>确认删除该档案文件？</AlertDialogTitle>
+                                <AlertDialogDescription>删除后不可恢复，文件将从档案库移除。</AlertDialogDescription>
+                              </AlertDialogHeader>
+                              <AlertDialogFooter>
+                                <AlertDialogCancel>取消</AlertDialogCancel>
+                                <AlertDialogAction onClick={() => handleDeleteArchive(a.id)} className="bg-destructive text-white font-semibold hover:bg-destructive/90">确认删除</AlertDialogAction>
+                              </AlertDialogFooter>
+                            </AlertDialogContent>
+                          </AlertDialog>
                         </div>
                       </TableCell>
                     </TableRow>
@@ -1301,6 +1908,27 @@ export function EmployeeModule() {
           </Card>
         </TabsContent>
       </Tabs>
+
+      <Dialog open={!!statModal} onOpenChange={(open) => !open && setStatModal(null)}>
+        <DialogContent className="sm:max-w-[480px]">
+          <DialogHeader>
+            <DialogTitle>{statModal?.title}</DialogTitle>
+            <DialogDescription>点击指标展示对应员工列表。</DialogDescription>
+          </DialogHeader>
+          <div className="space-y-2 max-h-[360px] overflow-y-auto custom-scroll pr-2">
+            {statModal?.items && statModal.items.length > 0 ? statModal.items.map((item, idx) => (
+              <div key={idx} className="p-3 rounded-lg bg-muted/30 border border-muted/30 text-sm font-medium">
+                {item}
+              </div>
+            )) : (
+              <p className="text-sm text-muted-foreground">暂无数据</p>
+            )}
+          </div>
+          <DialogFooter>
+            <Button variant="ghost" onClick={() => setStatModal(null)}>关闭</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
       {/* Employee Detail / Archive Dialog */}
       <Dialog open={isDetailOpen} onOpenChange={setIsDetailOpen}>
@@ -1332,11 +1960,18 @@ export function EmployeeModule() {
                           <History className="size-4 text-primary/60" />
                           入职于 {selectedEmployee.join_date}
                         </div>
-                        {selectedEmployee.birthday && (
-                          <div className="flex items-center gap-2 text-sm text-pink-500 font-bold bg-pink-50 px-2 py-0.5 rounded-full ring-1 ring-pink-100">
-                            <Cake className="size-4" />
-                            生日 {selectedEmployee.birthday.slice(5)}
+                        {selectedEmployee.join_date && (
+                          <div className="flex items-center gap-2 text-sm text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded-full ring-1 ring-emerald-100">
+                            <Clock className="size-4" />
+                            司龄 {getSeniorityText(selectedEmployee.join_date) || '-'}
                           </div>
+                        )}
+                        {selectedEmployee.birthday && (
+                      <div className="flex items-center gap-2 text-sm text-pink-500 font-bold bg-pink-50 px-2 py-0.5 rounded-full ring-1 ring-pink-100">
+                        <Cake className="size-4" />
+                        {(selectedEmployee.birthday_calendar === 'lunar' ? '农历' : '阳历')}生日 {selectedEmployee.birthday?.slice(5)}
+                      </div>
+
                         )}
                       </div>
                     </div>
@@ -1545,7 +2180,7 @@ export function EmployeeModule() {
                                     )}
                                     <li className="flex items-start gap-2">
                                       <div className="size-1.5 bg-primary rounded-full mt-1 shrink-0"></div>
-                                      员工试用期已于 2026-03-01 结束，系统已自动转正。
+                                      员工试用期预计于 {getProbationEndDate(selectedEmployee?.join_date || contract.start_date, contract.probation_months) || '-'} 结束，系统将自动转正提醒。
                                     </li>
                                   </ul>
                                 </Card>

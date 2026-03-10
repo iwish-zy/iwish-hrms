@@ -122,6 +122,18 @@
       "namedRegex": "^/api/probation(?:/)?$"
     },
     {
+      "page": "/api/probation/evaluations",
+      "regex": "^/api/probation/evaluations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/probation/evaluations(?:/)?$"
+    },
+    {
+      "page": "/api/probation/templates",
+      "regex": "^/api/probation/templates(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/probation/templates(?:/)?$"
+    },
+    {
       "page": "/api/shifts",
       "regex": "^/api/shifts(?:/)?$",
       "routeKeys": {},

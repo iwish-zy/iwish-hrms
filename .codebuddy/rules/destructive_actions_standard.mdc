@@ -1,0 +1,51 @@
+---
+description: 
+alwaysApply: true
+enabled: true
+updatedAt: 2026-03-09T10:12:47.079Z
+provider: 
+---
+
+# 破坏性操作 UI 标准
+
+## 规则
+在本项目中，所有破坏性操作（如删除、永久禁用等）**严禁**使用浏览器的原生 `confirm()` 弹窗。
+
+## 实施要求
+1. **使用自定义组件**: 必须使用组件库中提供的 `AlertDialog` 组件（基于 Shadcn UI）来实现确认弹窗。
+2. **状态管理**: 应当在组件中维护一个 `deleteTarget` 或类似的状态，用于追踪正在操作的对象，并控制弹窗的开启/关闭。
+3. **视觉一致性**: 
+   - 确认按钮应使用 `variant="destructive"` 样式。
+   - **文字颜色**: 确认按钮的字体颜色必须明确设置为白色 (`text-white`)。
+   - 弹窗标题应清晰指明操作对象（例如：“确认删除入职记录”）。
+   - 弹窗描述应说明操作后果（例如：“删除后无法恢复”）。
+
+## 错误示例
+```javascript
+// ❌ 严禁使用
+if (confirm("确定要删除吗？")) {
+  handleDelete();
+}
+```
+
+## 正确示例
+```tsx
+// ✅ 推荐做法
+<AlertDialog open={deleteTarget?.id === item.id} onOpenChange={(open) => setDeleteTarget(open ? item : null)}>
+  <AlertDialogTrigger asChild>
+    <Button variant="destructive">删除</Button>
+  </AlertDialogTrigger>
+  <AlertDialogContent>
+    <AlertDialogHeader>
+      <AlertDialogTitle>确认删除 {item.name}</AlertDialogTitle>
+      <AlertDialogDescription>此操作不可撤销，请谨慎操作。</AlertDialogDescription>
+    </AlertDialogHeader>
+    <AlertDialogFooter>
+      <AlertDialogCancel>取消</AlertDialogCancel>
+      <AlertDialogAction onClick={() => handleDelete(item.id)} className="bg-destructive text-white hover:bg-destructive/90">
+        确认删除
+      </AlertDialogAction>
+    </AlertDialogFooter>
+  </AlertDialogContent>
+</AlertDialog>
+```

@@ -13,7 +13,9 @@
   "/api/onboarding/route": "app/api/onboarding/route.js",
   "/api/personnel-changes/route": "app/api/personnel-changes/route.js",
   "/api/positions/route": "app/api/positions/route.js",
+  "/api/probation/evaluations/route": "app/api/probation/evaluations/route.js",
   "/api/probation/route": "app/api/probation/route.js",
+  "/api/probation/templates/route": "app/api/probation/templates/route.js",
   "/api/shifts/route": "app/api/shifts/route.js",
   "/page": "app/page.js"
 }

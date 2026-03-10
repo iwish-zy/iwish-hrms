@@ -5,11 +5,39 @@ export async function GET() {
   const supabase = await createClient()
   const { data, error } = await supabase
     .from("probation_records")
-    .select("*")
-    .order("probation_end", { ascending: true })
+    .select(`
+      *,
+      employee:employees(
+        id, 
+        name, 
+        department:departments(name), 
+        position:positions(name)
+      )
+    `)
+    .order("probation_end_date", { ascending: true })
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 })
-  return NextResponse.json(data || [])
+
+  // 格式化数据，计算剩余天数等
+  const formattedData = (data || []).map((record: any) => {
+    const today = new Date();
+    const endDate = new Date(record.probation_end_date);
+    const diffTime = endDate.getTime() - today.getTime();
+    const daysLeft = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+    return {
+      ...record,
+      name: record.employee?.name,
+      department: record.employee?.department?.name,
+      position: record.employee?.position?.name,
+      joinDate: record.join_date,
+      probationEnd: record.probation_end_date,
+      daysLeft: Math.max(0, daysLeft),
+      progress: Math.min(100, Math.max(0, Math.round(((record.probation_months * 30 - daysLeft) / (record.probation_months * 30)) * 100)))
+    };
+  });
+
+  return NextResponse.json(formattedData)
 }
 
 export async function POST(request: NextRequest) {

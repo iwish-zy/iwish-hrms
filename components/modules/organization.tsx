@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Building2, Plus, Search, ChevronRight, Users, Edit, Trash2, Briefcase, Loader2, FolderTree, Building, FileText, ClipboardCheck, GraduationCap, Eye, Upload, File, X, Download, FileImage, FileBarChart, FileArchive, FileSearch } from "lucide-react"
@@ -231,14 +232,34 @@ function OrgTreeNode({
               <Edit className="size-3" />
             </Button>
             {!isCompany && (
-              <Button
-                variant="ghost"
-                size="icon"
-                className="size-7 text-destructive"
-                onClick={() => onDelete(node.id, node.name)}
-              >
-                <Trash2 className="size-3" />
-              </Button>
+              <AlertDialog>
+                <AlertDialogTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="size-7 text-destructive"
+                  >
+                    <Trash2 className="size-3" />
+                  </Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>确认删除部门</AlertDialogTitle>
+                    <AlertDialogDescription>
+                      确定删除「{node.name}」？此操作不可撤销，且子部门的上级关系会被置空。
+                    </AlertDialogDescription>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter>
+                    <AlertDialogCancel>取消</AlertDialogCancel>
+                    <AlertDialogAction 
+                      onClick={() => onDelete(node.id, node.name)}
+                      className="bg-destructive text-white hover:bg-destructive/90"
+                    >
+                      确认删除
+                    </AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
             )}
           </div>
         </div>
@@ -405,6 +426,7 @@ export function OrganizationModule() {
   const [search, setSearch] = useState("")
   const [dialogOpen, setDialogOpen] = useState(false)
   const [editingDept, setEditingDept] = useState<Department | null>(null)
+  const [deleteDeptTarget, setDeleteDeptTarget] = useState<{ id: string; name: string } | null>(null)
   const [saving, setSaving] = useState(false)
 
   // Build tree
@@ -466,7 +488,6 @@ export function OrganizationModule() {
 
   const handleDelete = useCallback(
     async (id: string, name: string) => {
-      if (!confirm(`确定删除「${name}」？此操作不可撤销，且子部门的上级关系会被置空。`)) return
       await fetch(`/api/departments?id=${id}`, { method: "DELETE" })
       mutate()
     },
@@ -683,17 +704,37 @@ export function OrganizationModule() {
                                 >
                                   <Edit className="size-3.5" />
                                 </Button>
-                                <Button
-                                  variant="ghost"
-                                  size="icon"
-                                  className="size-8 text-destructive"
-                                  onClick={(e) => {
-                                    e.stopPropagation()
-                                    handleDelete(dept.id, dept.name)
-                                  }}
-                                >
-                                  <Trash2 className="size-3.5" />
-                                </Button>
+                                <AlertDialog>
+                                  <AlertDialogTrigger asChild>
+                                    <Button
+                                      variant="ghost"
+                                      size="icon"
+                                      className="size-8 text-destructive"
+                                      onClick={(e) => {
+                                        e.stopPropagation()
+                                      }}
+                                    >
+                                      <Trash2 className="size-3.5" />
+                                    </Button>
+                                  </AlertDialogTrigger>
+                                  <AlertDialogContent onClick={(e) => e.stopPropagation()}>
+                                    <AlertDialogHeader>
+                                      <AlertDialogTitle>确认删除部门</AlertDialogTitle>
+                                      <AlertDialogDescription>
+                                        确定删除「{dept.name}」？此操作不可撤销，且子部门的上级关系会被置空。
+                                      </AlertDialogDescription>
+                                    </AlertDialogHeader>
+                                    <AlertDialogFooter>
+                                      <AlertDialogCancel>取消</AlertDialogCancel>
+                                      <AlertDialogAction 
+                                        onClick={() => handleDelete(dept.id, dept.name)}
+                                        className="bg-destructive text-white hover:bg-destructive/90"
+                                      >
+                                        确认删除
+                                      </AlertDialogAction>
+                                    </AlertDialogFooter>
+                                  </AlertDialogContent>
+                                </AlertDialog>
                               </div>
                             </TableCell>
                           </TableRow>
@@ -1337,7 +1378,6 @@ export function PositionModule() {
 
   const handleDelete = useCallback(
     async (id: string, name: string) => {
-      if (!confirm(`确定删除「${name}」？此操作不可撤销。`)) return
       await fetch(`/api/positions?id=${id}`, { method: "DELETE" })
       mutate()
     },
@@ -1499,14 +1539,34 @@ export function PositionModule() {
                           >
                             <Edit className="size-3.5" />
                           </Button>
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            className="size-8 text-destructive"
-                            onClick={() => handleDelete(pos.id, pos.name)}
-                          >
-                            <Trash2 className="size-3.5" />
-                          </Button>
+                          <AlertDialog>
+                            <AlertDialogTrigger asChild>
+                              <Button
+                                variant="ghost"
+                                size="icon"
+                                className="size-8 text-destructive"
+                              >
+                                <Trash2 className="size-3.5" />
+                              </Button>
+                            </AlertDialogTrigger>
+                            <AlertDialogContent>
+                              <AlertDialogHeader>
+                                <AlertDialogTitle>确认删除岗位</AlertDialogTitle>
+                                <AlertDialogDescription>
+                                  确定删除「{pos.name}」？此操作不可撤销。
+                                </AlertDialogDescription>
+                              </AlertDialogHeader>
+                              <AlertDialogFooter>
+                                <AlertDialogCancel>取消</AlertDialogCancel>
+                                <AlertDialogAction 
+                                  onClick={() => handleDelete(pos.id, pos.name)}
+                                  className="bg-destructive text-white hover:bg-destructive/90"
+                                >
+                                  确认删除
+                                </AlertDialogAction>
+                              </AlertDialogFooter>
+                            </AlertDialogContent>
+                          </AlertDialog>
                         </div>
                       </TableCell>
                     </TableRow>

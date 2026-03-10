@@ -16,6 +16,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/table.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/tabs.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/dialog.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/alert-dialog.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/label.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/select.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$building$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Building2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/building-2.js [app-ssr] (ecmascript) <export default as Building2>");
@@ -48,6 +49,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$textarea
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$scroll$2d$area$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/scroll-area.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/supabase.ts [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -191,26 +193,26 @@ function OrgTreeNode({ node, level = 0, onEdit, onDelete, allDepartments }) {
                                 className: `size-4 text-muted-foreground transition-transform shrink-0 ${expanded ? "rotate-90" : ""}`
                             }, void 0, false, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 168,
+                                lineNumber: 169,
                                 columnNumber: 13
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "size-4 shrink-0"
                             }, void 0, false, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 172,
+                                lineNumber: 173,
                                 columnNumber: 13
                             }, this),
                             isCompany ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$building$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Building$3e$__["Building"], {
                                 className: "size-4 text-primary shrink-0"
                             }, void 0, false, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 175,
+                                lineNumber: 176,
                                 columnNumber: 13
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$folder$2d$tree$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__FolderTree$3e$__["FolderTree"], {
                                 className: "size-4 text-primary/70 shrink-0"
                             }, void 0, false, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 177,
+                                lineNumber: 178,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -222,7 +224,7 @@ function OrgTreeNode({ node, level = 0, onEdit, onDelete, allDepartments }) {
                                 children: node.name
                             }, void 0, false, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 179,
+                                lineNumber: 180,
                                 columnNumber: 11
                             }, this),
                             node.code && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -234,7 +236,7 @@ function OrgTreeNode({ node, level = 0, onEdit, onDelete, allDepartments }) {
                                 children: node.code
                             }, void 0, false, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 189,
+                                lineNumber: 190,
                                 columnNumber: 13
                             }, this),
                             node.manager && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Badge"], {
@@ -247,7 +249,7 @@ function OrgTreeNode({ node, level = 0, onEdit, onDelete, allDepartments }) {
                                 children: node.manager
                             }, void 0, false, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 200,
+                                lineNumber: 201,
                                 columnNumber: 13
                             }, this),
                             hasChildren && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -259,13 +261,13 @@ function OrgTreeNode({ node, level = 0, onEdit, onDelete, allDepartments }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 212,
+                                lineNumber: 213,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 163,
+                        lineNumber: 164,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -280,7 +282,7 @@ function OrgTreeNode({ node, level = 0, onEdit, onDelete, allDepartments }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 219,
+                                lineNumber: 220,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Badge"], {
@@ -289,7 +291,7 @@ function OrgTreeNode({ node, level = 0, onEdit, onDelete, allDepartments }) {
                                 children: node.status
                             }, void 0, false, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 223,
+                                lineNumber: 224,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -304,47 +306,119 @@ function OrgTreeNode({ node, level = 0, onEdit, onDelete, allDepartments }) {
                                             className: "size-3"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 231,
+                                            lineNumber: 232,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 230,
+                                        lineNumber: 231,
                                         columnNumber: 13
                                     }, this),
-                                    !isCompany && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                        variant: "ghost",
-                                        size: "icon",
-                                        className: "size-7 text-destructive",
-                                        onClick: ()=>onDelete(node.id, node.name),
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
-                                            className: "size-3"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 240,
-                                            columnNumber: 17
-                                        }, this)
-                                    }, void 0, false, {
+                                    !isCompany && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialog"], {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogTrigger"], {
+                                                asChild: true,
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                                                    variant: "ghost",
+                                                    size: "icon",
+                                                    className: "size-7 text-destructive",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
+                                                        className: "size-3"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/modules/organization.tsx",
+                                                        lineNumber: 242,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/modules/organization.tsx",
+                                                    lineNumber: 237,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/modules/organization.tsx",
+                                                lineNumber: 236,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogContent"], {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogHeader"], {
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogTitle"], {
+                                                                children: "确认删除部门"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/modules/organization.tsx",
+                                                                lineNumber: 247,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogDescription"], {
+                                                                children: [
+                                                                    "确定删除「",
+                                                                    node.name,
+                                                                    "」？此操作不可撤销，且子部门的上级关系会被置空。"
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/components/modules/organization.tsx",
+                                                                lineNumber: 248,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/components/modules/organization.tsx",
+                                                        lineNumber: 246,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogFooter"], {
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogCancel"], {
+                                                                children: "取消"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/modules/organization.tsx",
+                                                                lineNumber: 253,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogAction"], {
+                                                                onClick: ()=>onDelete(node.id, node.name),
+                                                                className: "bg-destructive text-white hover:bg-destructive/90",
+                                                                children: "确认删除"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/modules/organization.tsx",
+                                                                lineNumber: 254,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/components/modules/organization.tsx",
+                                                        lineNumber: 252,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/modules/organization.tsx",
+                                                lineNumber: 245,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 234,
+                                        lineNumber: 235,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 229,
+                                lineNumber: 230,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 217,
+                        lineNumber: 218,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 160,
+                lineNumber: 161,
                 columnNumber: 7
             }, this),
             expanded && hasChildren && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -357,18 +431,18 @@ function OrgTreeNode({ node, level = 0, onEdit, onDelete, allDepartments }) {
                         allDepartments: allDepartments
                     }, child.id, false, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 249,
+                        lineNumber: 270,
                         columnNumber: 13
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 247,
+                lineNumber: 268,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/modules/organization.tsx",
-        lineNumber: 159,
+        lineNumber: 160,
         columnNumber: 5
     }, this);
 }
@@ -429,20 +503,20 @@ function DepartmentDialog({ open, onOpenChange, departments, editingDept, onSave
                             children: editingDept ? "编辑部门" : "新增部门"
                         }, void 0, false, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 328,
+                            lineNumber: 349,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogDescription"], {
                             children: editingDept ? "修改部门信息" : "填写部门信息以创建新部门"
                         }, void 0, false, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 329,
+                            lineNumber: 350,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 327,
+                    lineNumber: 348,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -455,7 +529,7 @@ function DepartmentDialog({ open, onOpenChange, departments, editingDept, onSave
                                     children: "部门名称 *"
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 335,
+                                    lineNumber: 356,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -464,13 +538,13 @@ function DepartmentDialog({ open, onOpenChange, departments, editingDept, onSave
                                     onChange: (e)=>setName(e.target.value)
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 336,
+                                    lineNumber: 357,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 334,
+                            lineNumber: 355,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -480,7 +554,7 @@ function DepartmentDialog({ open, onOpenChange, departments, editingDept, onSave
                                     children: "部门编码"
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 343,
+                                    lineNumber: 364,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -489,13 +563,13 @@ function DepartmentDialog({ open, onOpenChange, departments, editingDept, onSave
                                     onChange: (e)=>setCode(e.target.value)
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 344,
+                                    lineNumber: 365,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 342,
+                            lineNumber: 363,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -505,7 +579,7 @@ function DepartmentDialog({ open, onOpenChange, departments, editingDept, onSave
                                     children: "上级部门"
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 351,
+                                    lineNumber: 372,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -517,12 +591,12 @@ function DepartmentDialog({ open, onOpenChange, departments, editingDept, onSave
                                                 placeholder: "选择上级部门（顶级则留空）"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 354,
+                                                lineNumber: 375,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 353,
+                                            lineNumber: 374,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -532,7 +606,7 @@ function DepartmentDialog({ open, onOpenChange, departments, editingDept, onSave
                                                     children: "无（顶级部门）"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 357,
+                                                    lineNumber: 378,
                                                     columnNumber: 17
                                                 }, this),
                                                 departments.filter((d)=>d.id !== editingDept?.id).map((d)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -543,25 +617,25 @@ function DepartmentDialog({ open, onOpenChange, departments, editingDept, onSave
                                                         ]
                                                     }, d.id, true, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 361,
+                                                        lineNumber: 382,
                                                         columnNumber: 21
                                                     }, this))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 356,
+                                            lineNumber: 377,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 352,
+                                    lineNumber: 373,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 350,
+                            lineNumber: 371,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -574,7 +648,7 @@ function DepartmentDialog({ open, onOpenChange, departments, editingDept, onSave
                                             children: "部门负责人"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 370,
+                                            lineNumber: 391,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -583,13 +657,13 @@ function DepartmentDialog({ open, onOpenChange, departments, editingDept, onSave
                                             onChange: (e)=>setManager(e.target.value)
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 371,
+                                            lineNumber: 392,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 369,
+                                    lineNumber: 390,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -599,7 +673,7 @@ function DepartmentDialog({ open, onOpenChange, departments, editingDept, onSave
                                             children: "编制人数"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 378,
+                                            lineNumber: 399,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -609,25 +683,25 @@ function DepartmentDialog({ open, onOpenChange, departments, editingDept, onSave
                                             onChange: (e)=>setHeadcount(e.target.value)
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 379,
+                                            lineNumber: 400,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 377,
+                                    lineNumber: 398,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 368,
+                            lineNumber: 389,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 333,
+                    lineNumber: 354,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogFooter"], {
@@ -638,7 +712,7 @@ function DepartmentDialog({ open, onOpenChange, departments, editingDept, onSave
                             children: "取消"
                         }, void 0, false, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 389,
+                            lineNumber: 410,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -649,31 +723,31 @@ function DepartmentDialog({ open, onOpenChange, departments, editingDept, onSave
                                     className: "mr-2 size-4 animate-spin"
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 393,
+                                    lineNumber: 414,
                                     columnNumber: 24
                                 }, this),
                                 editingDept ? "保存修改" : "确认创建"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 392,
+                            lineNumber: 413,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 388,
+                    lineNumber: 409,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/modules/organization.tsx",
-            lineNumber: 326,
+            lineNumber: 347,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/modules/organization.tsx",
-        lineNumber: 325,
+        lineNumber: 346,
         columnNumber: 5
     }, this);
 }
@@ -682,6 +756,7 @@ function OrganizationModule() {
     const [search, setSearch] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [dialogOpen, setDialogOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [editingDept, setEditingDept] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [deleteDeptTarget, setDeleteDeptTarget] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [saving, setSaving] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     // Build tree
     const tree = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>buildTree(departments), [
@@ -740,7 +815,6 @@ function OrganizationModule() {
         setDialogOpen(true);
     }, []);
     const handleDelete = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(async (id, name)=>{
-        if (!confirm(`确定删除「${name}」？此操作不可撤销，且子部门的上级关系会被置空。`)) return;
         await fetch(`/api/departments?id=${id}`, {
             method: "DELETE"
         });
@@ -762,7 +836,7 @@ function OrganizationModule() {
                         children: "加载组织架构失败"
                     }, void 0, false, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 485,
+                        lineNumber: 506,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -770,7 +844,7 @@ function OrganizationModule() {
                         children: error.message || "请检查网络连接和 Supabase 配置"
                     }, void 0, false, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 486,
+                        lineNumber: 507,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -779,18 +853,18 @@ function OrganizationModule() {
                         children: "重试"
                     }, void 0, false, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 487,
+                        lineNumber: 508,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 484,
+                lineNumber: 505,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/modules/organization.tsx",
-            lineNumber: 483,
+            lineNumber: 504,
             columnNumber: 7
         }, this);
     }
@@ -807,7 +881,7 @@ function OrganizationModule() {
                                 children: "组织架构"
                             }, void 0, false, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 497,
+                                lineNumber: 518,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -815,13 +889,13 @@ function OrganizationModule() {
                                 children: "管理公司组织结构、部门层级和编制，数据实时同步 Supabase"
                             }, void 0, false, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 498,
+                                lineNumber: 519,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 496,
+                        lineNumber: 517,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -831,20 +905,20 @@ function OrganizationModule() {
                                 className: "mr-2 size-4"
                             }, void 0, false, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 503,
+                                lineNumber: 524,
                                 columnNumber: 11
                             }, this),
                             "新增部门"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 502,
+                        lineNumber: 523,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 495,
+                lineNumber: 516,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -860,12 +934,12 @@ function OrganizationModule() {
                                         className: "size-5"
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 512,
+                                        lineNumber: 533,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 511,
+                                    lineNumber: 532,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -875,7 +949,7 @@ function OrganizationModule() {
                                             children: "部门总数"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 515,
+                                            lineNumber: 536,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -883,24 +957,24 @@ function OrganizationModule() {
                                             children: isLoading ? "-" : stats.total
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 516,
+                                            lineNumber: 537,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 514,
+                                    lineNumber: 535,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 510,
+                            lineNumber: 531,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 509,
+                        lineNumber: 530,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
@@ -913,12 +987,12 @@ function OrganizationModule() {
                                         className: "size-5"
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 523,
+                                        lineNumber: 544,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 522,
+                                    lineNumber: 543,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -928,7 +1002,7 @@ function OrganizationModule() {
                                             children: "一级部门"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 526,
+                                            lineNumber: 547,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -936,24 +1010,24 @@ function OrganizationModule() {
                                             children: isLoading ? "-" : stats.level1
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 527,
+                                            lineNumber: 548,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 525,
+                                    lineNumber: 546,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 521,
+                            lineNumber: 542,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 520,
+                        lineNumber: 541,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
@@ -966,12 +1040,12 @@ function OrganizationModule() {
                                         className: "size-5"
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 534,
+                                        lineNumber: 555,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 533,
+                                    lineNumber: 554,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -981,7 +1055,7 @@ function OrganizationModule() {
                                             children: "二级部门"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 537,
+                                            lineNumber: 558,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -989,24 +1063,24 @@ function OrganizationModule() {
                                             children: isLoading ? "-" : stats.level2
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 538,
+                                            lineNumber: 559,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 536,
+                                    lineNumber: 557,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 532,
+                            lineNumber: 553,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 531,
+                        lineNumber: 552,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
@@ -1019,12 +1093,12 @@ function OrganizationModule() {
                                         className: "size-5"
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 545,
+                                        lineNumber: 566,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 544,
+                                    lineNumber: 565,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1034,7 +1108,7 @@ function OrganizationModule() {
                                             children: "总编制"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 548,
+                                            lineNumber: 569,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1042,30 +1116,30 @@ function OrganizationModule() {
                                             children: isLoading ? "-" : stats.totalHeadcount
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 549,
+                                            lineNumber: 570,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 547,
+                                    lineNumber: 568,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 543,
+                            lineNumber: 564,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 542,
+                        lineNumber: 563,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 508,
+                lineNumber: 529,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Tabs"], {
@@ -1080,14 +1154,14 @@ function OrganizationModule() {
                                         className: "mr-1.5 size-4"
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 558,
+                                        lineNumber: 579,
                                         columnNumber: 13
                                     }, this),
                                     "组织树"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 557,
+                                lineNumber: 578,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -1097,20 +1171,20 @@ function OrganizationModule() {
                                         className: "mr-1.5 size-4"
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 562,
+                                        lineNumber: 583,
                                         columnNumber: 13
                                     }, this),
                                     "部门列表"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 561,
+                                lineNumber: 582,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 556,
+                        lineNumber: 577,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -1126,7 +1200,7 @@ function OrganizationModule() {
                                             className: "size-6 animate-spin text-muted-foreground"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 572,
+                                            lineNumber: 593,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1134,13 +1208,13 @@ function OrganizationModule() {
                                             children: "加载中..."
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 573,
+                                            lineNumber: 594,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 571,
+                                    lineNumber: 592,
                                     columnNumber: 17
                                 }, this) : tree.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex flex-col items-center justify-center py-12 text-muted-foreground",
@@ -1149,14 +1223,14 @@ function OrganizationModule() {
                                             className: "size-10 mb-3 opacity-50"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 577,
+                                            lineNumber: 598,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: "暂无组织数据"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 578,
+                                            lineNumber: 599,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -1166,13 +1240,13 @@ function OrganizationModule() {
                                             children: "点击新增部门"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 579,
+                                            lineNumber: 600,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 576,
+                                    lineNumber: 597,
                                     columnNumber: 17
                                 }, this) : tree.map((node)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(OrgTreeNode, {
                                         node: node,
@@ -1181,22 +1255,22 @@ function OrganizationModule() {
                                         allDepartments: departments
                                     }, node.id, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 585,
+                                        lineNumber: 606,
                                         columnNumber: 19
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 569,
+                                lineNumber: 590,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 568,
+                            lineNumber: 589,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 567,
+                        lineNumber: 588,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -1215,7 +1289,7 @@ function OrganizationModule() {
                                                     className: "absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 603,
+                                                    lineNumber: 624,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -1225,23 +1299,23 @@ function OrganizationModule() {
                                                     onChange: (e)=>setSearch(e.target.value)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 604,
+                                                    lineNumber: 625,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 602,
+                                            lineNumber: 623,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 601,
+                                        lineNumber: 622,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 600,
+                                    lineNumber: 621,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1252,7 +1326,7 @@ function OrganizationModule() {
                                                 className: "size-6 animate-spin text-muted-foreground"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 616,
+                                                lineNumber: 637,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1260,13 +1334,13 @@ function OrganizationModule() {
                                                 children: "加载中..."
                                             }, void 0, false, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 617,
+                                                lineNumber: 638,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 615,
+                                        lineNumber: 636,
                                         columnNumber: 17
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Table"], {
                                         children: [
@@ -1277,49 +1351,49 @@ function OrganizationModule() {
                                                             children: "部门编码"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 623,
+                                                            lineNumber: 644,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableHead"], {
                                                             children: "部门名称"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 624,
+                                                            lineNumber: 645,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableHead"], {
                                                             children: "层级"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 625,
+                                                            lineNumber: 646,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableHead"], {
                                                             children: "上级部门"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 626,
+                                                            lineNumber: 647,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableHead"], {
                                                             children: "负责人"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 627,
+                                                            lineNumber: 648,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableHead"], {
                                                             children: "编制"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 628,
+                                                            lineNumber: 649,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableHead"], {
                                                             children: "状态"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 629,
+                                                            lineNumber: 650,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableHead"], {
@@ -1327,18 +1401,18 @@ function OrganizationModule() {
                                                             children: "操作"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 630,
+                                                            lineNumber: 651,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 622,
+                                                    lineNumber: 643,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 621,
+                                                lineNumber: 642,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableBody"], {
@@ -1349,12 +1423,12 @@ function OrganizationModule() {
                                                         children: search ? "未找到匹配部门" : "暂无部门数据"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 636,
+                                                        lineNumber: 657,
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 635,
+                                                    lineNumber: 656,
                                                     columnNumber: 23
                                                 }, this) : filteredDepts.map((dept)=>{
                                                     const parent = departments.find((d)=>d.id === dept.parent_id);
@@ -1367,7 +1441,7 @@ function OrganizationModule() {
                                                                 children: dept.code || "-"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 649,
+                                                                lineNumber: 670,
                                                                 columnNumber: 29
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -1375,7 +1449,7 @@ function OrganizationModule() {
                                                                 children: dept.name
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 652,
+                                                                lineNumber: 673,
                                                                 columnNumber: 29
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -1385,12 +1459,12 @@ function OrganizationModule() {
                                                                     children: dept.level === 1 ? "一级" : dept.level === 2 ? "二级" : `${dept.level}级`
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                                    lineNumber: 654,
+                                                                    lineNumber: 675,
                                                                     columnNumber: 31
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 653,
+                                                                lineNumber: 674,
                                                                 columnNumber: 29
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -1398,14 +1472,14 @@ function OrganizationModule() {
                                                                 children: parent?.name || "-"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 658,
+                                                                lineNumber: 679,
                                                                 columnNumber: 29
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
                                                                 children: dept.manager || "-"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 661,
+                                                                lineNumber: 682,
                                                                 columnNumber: 29
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -1417,12 +1491,12 @@ function OrganizationModule() {
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                                    lineNumber: 663,
+                                                                    lineNumber: 684,
                                                                     columnNumber: 31
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 662,
+                                                                lineNumber: 683,
                                                                 columnNumber: 29
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -1432,12 +1506,12 @@ function OrganizationModule() {
                                                                     children: dept.status
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                                    lineNumber: 666,
+                                                                    lineNumber: 687,
                                                                     columnNumber: 31
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 665,
+                                                                lineNumber: 686,
                                                                 columnNumber: 29
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -1457,83 +1531,156 @@ function OrganizationModule() {
                                                                                 className: "size-3.5"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                                lineNumber: 684,
+                                                                                lineNumber: 705,
                                                                                 columnNumber: 35
                                                                             }, this)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                                            lineNumber: 675,
+                                                                            lineNumber: 696,
                                                                             columnNumber: 33
                                                                         }, this),
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                                            variant: "ghost",
-                                                                            size: "icon",
-                                                                            className: "size-8 text-destructive",
-                                                                            onClick: (e)=>{
-                                                                                e.stopPropagation();
-                                                                                handleDelete(dept.id, dept.name);
-                                                                            },
-                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
-                                                                                className: "size-3.5"
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/components/modules/organization.tsx",
-                                                                                lineNumber: 695,
-                                                                                columnNumber: 35
-                                                                            }, this)
-                                                                        }, void 0, false, {
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialog"], {
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogTrigger"], {
+                                                                                    asChild: true,
+                                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                                                                                        variant: "ghost",
+                                                                                        size: "icon",
+                                                                                        className: "size-8 text-destructive",
+                                                                                        onClick: (e)=>{
+                                                                                            e.stopPropagation();
+                                                                                        },
+                                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
+                                                                                            className: "size-3.5"
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/components/modules/organization.tsx",
+                                                                                            lineNumber: 717,
+                                                                                            columnNumber: 39
+                                                                                        }, this)
+                                                                                    }, void 0, false, {
+                                                                                        fileName: "[project]/components/modules/organization.tsx",
+                                                                                        lineNumber: 709,
+                                                                                        columnNumber: 37
+                                                                                    }, this)
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/components/modules/organization.tsx",
+                                                                                    lineNumber: 708,
+                                                                                    columnNumber: 35
+                                                                                }, this),
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogContent"], {
+                                                                                    onClick: (e)=>e.stopPropagation(),
+                                                                                    children: [
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogHeader"], {
+                                                                                            children: [
+                                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogTitle"], {
+                                                                                                    children: "确认删除部门"
+                                                                                                }, void 0, false, {
+                                                                                                    fileName: "[project]/components/modules/organization.tsx",
+                                                                                                    lineNumber: 722,
+                                                                                                    columnNumber: 39
+                                                                                                }, this),
+                                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogDescription"], {
+                                                                                                    children: [
+                                                                                                        "确定删除「",
+                                                                                                        dept.name,
+                                                                                                        "」？此操作不可撤销，且子部门的上级关系会被置空。"
+                                                                                                    ]
+                                                                                                }, void 0, true, {
+                                                                                                    fileName: "[project]/components/modules/organization.tsx",
+                                                                                                    lineNumber: 723,
+                                                                                                    columnNumber: 39
+                                                                                                }, this)
+                                                                                            ]
+                                                                                        }, void 0, true, {
+                                                                                            fileName: "[project]/components/modules/organization.tsx",
+                                                                                            lineNumber: 721,
+                                                                                            columnNumber: 37
+                                                                                        }, this),
+                                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogFooter"], {
+                                                                                            children: [
+                                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogCancel"], {
+                                                                                                    children: "取消"
+                                                                                                }, void 0, false, {
+                                                                                                    fileName: "[project]/components/modules/organization.tsx",
+                                                                                                    lineNumber: 728,
+                                                                                                    columnNumber: 39
+                                                                                                }, this),
+                                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogAction"], {
+                                                                                                    onClick: ()=>handleDelete(dept.id, dept.name),
+                                                                                                    className: "bg-destructive text-white hover:bg-destructive/90",
+                                                                                                    children: "确认删除"
+                                                                                                }, void 0, false, {
+                                                                                                    fileName: "[project]/components/modules/organization.tsx",
+                                                                                                    lineNumber: 729,
+                                                                                                    columnNumber: 39
+                                                                                                }, this)
+                                                                                            ]
+                                                                                        }, void 0, true, {
+                                                                                            fileName: "[project]/components/modules/organization.tsx",
+                                                                                            lineNumber: 727,
+                                                                                            columnNumber: 37
+                                                                                        }, this)
+                                                                                    ]
+                                                                                }, void 0, true, {
+                                                                                    fileName: "[project]/components/modules/organization.tsx",
+                                                                                    lineNumber: 720,
+                                                                                    columnNumber: 35
+                                                                                }, this)
+                                                                            ]
+                                                                        }, void 0, true, {
                                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                                            lineNumber: 686,
+                                                                            lineNumber: 707,
                                                                             columnNumber: 33
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                                    lineNumber: 674,
+                                                                    lineNumber: 695,
                                                                     columnNumber: 31
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 673,
+                                                                lineNumber: 694,
                                                                 columnNumber: 29
                                                             }, this)
                                                         ]
                                                     }, dept.id, true, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 644,
+                                                        lineNumber: 665,
                                                         columnNumber: 27
                                                     }, this);
                                                 })
                                             }, void 0, false, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 633,
+                                                lineNumber: 654,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 620,
+                                        lineNumber: 641,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 613,
+                                    lineNumber: 634,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 599,
+                            lineNumber: 620,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 598,
+                        lineNumber: 619,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 555,
+                lineNumber: 576,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(DepartmentDialog, {
@@ -1545,13 +1692,13 @@ function OrganizationModule() {
                 saving: saving
             }, void 0, false, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 712,
+                lineNumber: 753,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/modules/organization.tsx",
-        lineNumber: 494,
+        lineNumber: 515,
         columnNumber: 5
     }, this);
 }
@@ -1620,20 +1767,20 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                             children: editingPosition ? "编辑岗位" : "新增岗位"
                         }, void 0, false, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 792,
+                            lineNumber: 833,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogDescription"], {
                             children: editingPosition ? "修改岗位基本信息" : "填写岗位信息"
                         }, void 0, false, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 793,
+                            lineNumber: 834,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 791,
+                    lineNumber: 832,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1649,7 +1796,7 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                             children: "岗位名称 *"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 799,
+                                            lineNumber: 840,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -1658,13 +1805,13 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                             onChange: (e)=>setName(e.target.value)
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 800,
+                                            lineNumber: 841,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 798,
+                                    lineNumber: 839,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1674,7 +1821,7 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                             children: "岗位编码"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 803,
+                                            lineNumber: 844,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -1682,19 +1829,19 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                             readOnly: true
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 804,
+                                            lineNumber: 845,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 802,
+                                    lineNumber: 843,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 797,
+                            lineNumber: 838,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1707,7 +1854,7 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                             children: "所属体系"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 809,
+                                            lineNumber: 850,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -1719,12 +1866,12 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                                         placeholder: "选择体系"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 812,
+                                                        lineNumber: 853,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 811,
+                                                    lineNumber: 852,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -1734,7 +1881,7 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                                             children: "运营体系"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 815,
+                                                            lineNumber: 856,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1742,7 +1889,7 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                                             children: "市场营销体系"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 816,
+                                                            lineNumber: 857,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1750,25 +1897,25 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                                             children: "职能体系"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 817,
+                                                            lineNumber: 858,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 814,
+                                                    lineNumber: 855,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 810,
+                                            lineNumber: 851,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 808,
+                                    lineNumber: 849,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1778,7 +1925,7 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                             children: "职级范围"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 822,
+                                            lineNumber: 863,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -1787,19 +1934,19 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                             onChange: (e)=>setLevel(e.target.value)
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 823,
+                                            lineNumber: 864,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 821,
+                                    lineNumber: 862,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 807,
+                            lineNumber: 848,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1812,7 +1959,7 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                             children: "所属部门"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 828,
+                                            lineNumber: 869,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -1824,12 +1971,12 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                                         placeholder: "选择所属部门"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 831,
+                                                        lineNumber: 872,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 830,
+                                                    lineNumber: 871,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -1839,7 +1986,7 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                                             children: "无"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 834,
+                                                            lineNumber: 875,
                                                             columnNumber: 19
                                                         }, this),
                                                         departments.filter((d)=>d.level > 0).map((d)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1850,25 +1997,25 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                                                 ]
                                                             }, d.id, true, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 838,
+                                                                lineNumber: 879,
                                                                 columnNumber: 23
                                                             }, this))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 833,
+                                                    lineNumber: 874,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 829,
+                                            lineNumber: 870,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 827,
+                                    lineNumber: 868,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1878,7 +2025,7 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                             children: "状态"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 846,
+                                            lineNumber: 887,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
@@ -1890,12 +2037,12 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                                         placeholder: "选择状态"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 849,
+                                                        lineNumber: 890,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 848,
+                                                    lineNumber: 889,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -1905,7 +2052,7 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                                             children: "启用"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 852,
+                                                            lineNumber: 893,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1913,31 +2060,31 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                                             children: "停用"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 853,
+                                                            lineNumber: 894,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 851,
+                                                    lineNumber: 892,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 847,
+                                            lineNumber: 888,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 845,
+                                    lineNumber: 886,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 826,
+                            lineNumber: 867,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1950,7 +2097,7 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                             children: "编制人数"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 860,
+                                            lineNumber: 901,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -1960,13 +2107,13 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                             onChange: (e)=>setHeadcount(e.target.value)
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 861,
+                                            lineNumber: 902,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 859,
+                                    lineNumber: 900,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1976,7 +2123,7 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                             children: "在岗人数"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 864,
+                                            lineNumber: 905,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -1986,19 +2133,19 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                             onChange: (e)=>setFilled(e.target.value)
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 865,
+                                            lineNumber: 906,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 863,
+                                    lineNumber: 904,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 858,
+                            lineNumber: 899,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2008,7 +2155,7 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                     children: "薪资范围"
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 869,
+                                    lineNumber: 910,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -2017,19 +2164,19 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                     onChange: (e)=>setSalary(e.target.value)
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 870,
+                                    lineNumber: 911,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 868,
+                            lineNumber: 909,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 796,
+                    lineNumber: 837,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogFooter"], {
@@ -2040,7 +2187,7 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                             children: "取消"
                         }, void 0, false, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 875,
+                            lineNumber: 916,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -2051,31 +2198,31 @@ function PositionDialog({ open, onOpenChange, departments, editingPosition, onSa
                                     className: "mr-2 size-4 animate-spin"
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 879,
+                                    lineNumber: 920,
                                     columnNumber: 24
                                 }, this),
                                 editingPosition ? "保存修改" : "确认创建"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 878,
+                            lineNumber: 919,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 874,
+                    lineNumber: 915,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/modules/organization.tsx",
-            lineNumber: 790,
+            lineNumber: 831,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/modules/organization.tsx",
-        lineNumber: 789,
+        lineNumber: 830,
         columnNumber: 5
     }, this);
 }
@@ -2126,7 +2273,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                     className: "size-4"
                 }, void 0, false, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 937,
+                    lineNumber: 978,
                     columnNumber: 22
                 }, this),
                 color: 'text-blue-500',
@@ -2143,7 +2290,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                     className: "size-4"
                 }, void 0, false, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 940,
+                    lineNumber: 981,
                     columnNumber: 22
                 }, this),
                 color: 'text-red-500',
@@ -2161,7 +2308,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                     className: "size-4"
                 }, void 0, false, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 943,
+                    lineNumber: 984,
                     columnNumber: 22
                 }, this),
                 color: 'text-blue-600',
@@ -2179,7 +2326,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                     className: "size-4"
                 }, void 0, false, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 946,
+                    lineNumber: 987,
                     columnNumber: 22
                 }, this),
                 color: 'text-green-600',
@@ -2198,7 +2345,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                     className: "size-4"
                 }, void 0, false, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 949,
+                    lineNumber: 990,
                     columnNumber: 22
                 }, this),
                 color: 'text-orange-500',
@@ -2212,7 +2359,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                 className: "size-4"
             }, void 0, false, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 951,
+                lineNumber: 992,
                 columnNumber: 20
             }, this),
             color: 'text-gray-500',
@@ -2270,21 +2417,21 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                 className: "size-5 text-primary"
             }, void 0, false, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 1007,
+                lineNumber: 1048,
                 columnNumber: 24
             }, this),
             probation_criteria: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$clipboard$2d$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ClipboardCheck$3e$__["ClipboardCheck"], {
                 className: "size-5 text-success"
             }, void 0, false, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 1008,
+                lineNumber: 1049,
                 columnNumber: 27
             }, this),
             professional_training: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$graduation$2d$cap$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__GraduationCap$3e$__["GraduationCap"], {
                 className: "size-5 text-warning"
             }, void 0, false, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 1009,
+                lineNumber: 1050,
                 columnNumber: 30
             }, this)
         };
@@ -2308,7 +2455,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 1022,
+                            lineNumber: 1063,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2324,14 +2471,14 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                             className: "size-4 mr-2"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1029,
+                                            lineNumber: 1070,
                                             columnNumber: 17
                                         }, this),
                                         "编辑文本"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1028,
+                                    lineNumber: 1069,
                                     columnNumber: 15
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                                     variant: "ghost",
@@ -2341,7 +2488,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                     children: "取消编辑"
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1033,
+                                    lineNumber: 1074,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -2354,26 +2501,26 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                             className: "mr-2 size-4 animate-spin"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1038,
+                                            lineNumber: 1079,
                                             columnNumber: 26
                                         }, this),
                                         "保存全部修改"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1037,
+                                    lineNumber: 1078,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 1026,
+                            lineNumber: 1067,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 1021,
+                    lineNumber: 1062,
                     columnNumber: 9
                 }, this),
                 editMode ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$textarea$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Textarea"], {
@@ -2386,7 +2533,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                     className: "min-h-[300px] text-base leading-relaxed p-6 focus-visible:ring-primary/20 transition-shadow bg-background"
                 }, void 0, false, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 1045,
+                    lineNumber: 1086,
                     columnNumber: 11
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "min-h-[200px] p-6 bg-muted/20 rounded-xl whitespace-pre-wrap text-base leading-relaxed text-foreground/80 border border-muted-foreground/10 shadow-sm",
@@ -2395,12 +2542,12 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                         children: "暂无详细内容"
                     }, void 0, false, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 1053,
+                        lineNumber: 1094,
                         columnNumber: 31
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 1052,
+                    lineNumber: 1093,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2416,7 +2563,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                             className: "size-3.5 text-muted-foreground"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1060,
+                                            lineNumber: 1101,
                                             columnNumber: 15
                                         }, this),
                                         "相关附件 ",
@@ -2426,13 +2573,13 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                             children: files.length
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1061,
+                                            lineNumber: 1102,
                                             columnNumber: 20
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1059,
+                                    lineNumber: 1100,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2447,7 +2594,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                             onChange: (e)=>handleFileChange(e, type)
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1064,
+                                            lineNumber: 1105,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -2461,32 +2608,32 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                     className: "size-3 mr-1.5 animate-spin"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1079,
+                                                    lineNumber: 1120,
                                                     columnNumber: 39
                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
                                                     className: "size-3 mr-1.5 group-hover:scale-110 transition-transform"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1079,
+                                                    lineNumber: 1120,
                                                     columnNumber: 92
                                                 }, this),
                                                 "添加附件"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1072,
+                                            lineNumber: 1113,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1063,
+                                    lineNumber: 1104,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 1058,
+                            lineNumber: 1099,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2505,7 +2652,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                         children: fileInfo.icon
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 1091,
+                                                        lineNumber: 1132,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2516,7 +2663,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                                 children: fileInfo.name
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 1095,
+                                                                lineNumber: 1136,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2527,19 +2674,19 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 1098,
+                                                                lineNumber: 1139,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 1094,
+                                                        lineNumber: 1135,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 1090,
+                                                lineNumber: 1131,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2554,12 +2701,12 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                             className: "size-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 1105,
+                                                            lineNumber: 1146,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 1104,
+                                                        lineNumber: 1145,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -2576,17 +2723,17 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                                 className: "size-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 1109,
+                                                                lineNumber: 1150,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 1108,
+                                                            lineNumber: 1149,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 1107,
+                                                        lineNumber: 1148,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -2598,24 +2745,24 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                             className: "size-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 1113,
+                                                            lineNumber: 1154,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 1112,
+                                                        lineNumber: 1153,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 1103,
+                                                lineNumber: 1144,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, idx, true, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 1089,
+                                        lineNumber: 1130,
                                         columnNumber: 17
                                     }, this);
                                 }),
@@ -2626,7 +2773,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                             className: "size-8 opacity-20"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1121,
+                                            lineNumber: 1162,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2634,31 +2781,31 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                             children: "暂无相关附件，请点击右上角上传"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1122,
+                                            lineNumber: 1163,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1120,
+                                    lineNumber: 1161,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 1085,
+                            lineNumber: 1126,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 1057,
+                    lineNumber: 1098,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/modules/organization.tsx",
-            lineNumber: 1020,
+            lineNumber: 1061,
             columnNumber: 7
         }, this);
     };
@@ -2686,12 +2833,12 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                         className: "size-7"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 1140,
+                                                        lineNumber: 1181,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1139,
+                                                    lineNumber: 1180,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2701,7 +2848,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                             children: position.name
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 1143,
+                                                            lineNumber: 1184,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2713,14 +2860,14 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                                     children: position.code
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                                    lineNumber: 1145,
+                                                                    lineNumber: 1186,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     className: "h-3 w-[1px] bg-muted-foreground/30"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                                    lineNumber: 1146,
+                                                                    lineNumber: 1187,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2730,37 +2877,37 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                                             className: "size-3.5"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                                            lineNumber: 1148,
+                                                                            lineNumber: 1189,
                                                                             columnNumber: 25
                                                                         }, this),
                                                                         position.family
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                                    lineNumber: 1147,
+                                                                    lineNumber: 1188,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/modules/organization.tsx",
-                                                            lineNumber: 1144,
+                                                            lineNumber: 1185,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1142,
+                                                    lineNumber: 1183,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1138,
+                                            lineNumber: 1179,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 1137,
+                                        lineNumber: 1178,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2771,7 +2918,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                 children: position.department_name || "未分配部门"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 1156,
+                                                lineNumber: 1197,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2784,7 +2931,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                                 className: "size-3.5 text-primary/70"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 1161,
+                                                                lineNumber: 1202,
                                                                 columnNumber: 21
                                                             }, this),
                                                             "职级: ",
@@ -2793,20 +2940,20 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                                 children: position.level || "未设定"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 1162,
+                                                                lineNumber: 1203,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 1160,
+                                                        lineNumber: 1201,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: "h-3 w-[1px] bg-muted-foreground/20"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 1164,
+                                                        lineNumber: 1205,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2816,7 +2963,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                                 className: "size-3.5 text-primary/70"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 1166,
+                                                                lineNumber: 1207,
                                                                 columnNumber: 21
                                                             }, this),
                                                             "薪资: ",
@@ -2825,36 +2972,36 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                                 children: position.salary || "保密"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 1167,
+                                                                lineNumber: 1208,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 1165,
+                                                        lineNumber: 1206,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 1159,
+                                                lineNumber: 1200,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 1155,
+                                        lineNumber: 1196,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 1136,
+                                lineNumber: 1177,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 1135,
+                            lineNumber: 1176,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2875,7 +3022,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                     children: "岗位职责书"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1178,
+                                                    lineNumber: 1219,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -2884,7 +3031,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                     children: "试用期考核"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1184,
+                                                    lineNumber: 1225,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -2893,18 +3040,18 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                     children: "岗位专业培训"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1190,
+                                                    lineNumber: 1231,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1177,
+                                            lineNumber: 1218,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 1176,
+                                        lineNumber: 1217,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$scroll$2d$area$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ScrollArea"], {
@@ -2918,7 +3065,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                     children: renderContent("job_description")
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1201,
+                                                    lineNumber: 1242,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -2927,7 +3074,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                     children: renderContent("probation_criteria")
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1204,
+                                                    lineNumber: 1245,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -2936,40 +3083,40 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                     children: renderContent("professional_training")
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1207,
+                                                    lineNumber: 1248,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1200,
+                                            lineNumber: 1241,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 1199,
+                                        lineNumber: 1240,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 1175,
+                                lineNumber: 1216,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 1174,
+                            lineNumber: 1215,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 1134,
+                    lineNumber: 1175,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 1133,
+                lineNumber: 1174,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Dialog"], {
@@ -2989,7 +3136,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                             children: previewUrl && getFileInfo(previewUrl).icon
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1222,
+                                            lineNumber: 1263,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogTitle"], {
@@ -3000,13 +3147,13 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1225,
+                                            lineNumber: 1266,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1221,
+                                    lineNumber: 1262,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3026,30 +3173,30 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                     className: "size-3.5"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1232,
+                                                    lineNumber: 1273,
                                                     columnNumber: 19
                                                 }, this),
                                                 "下载原文件"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1231,
+                                            lineNumber: 1272,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 1230,
+                                        lineNumber: 1271,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1229,
+                                    lineNumber: 1270,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 1220,
+                            lineNumber: 1261,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3063,12 +3210,12 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                         className: "max-w-full max-h-full object-contain shadow-xl rounded-lg bg-white"
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 1243,
+                                        lineNumber: 1284,
                                         columnNumber: 21
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1242,
+                                    lineNumber: 1283,
                                     columnNumber: 19
                                 }, this) : previewUrl.toLowerCase().endsWith('.pdf') ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
                                     src: `${previewUrl}#toolbar=0`,
@@ -3076,7 +3223,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                     title: "PDF预览"
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1250,
+                                    lineNumber: 1291,
                                     columnNumber: 19
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex flex-col items-center justify-center gap-6 p-12 text-center bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl border border-white max-w-md",
@@ -3086,7 +3233,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                             children: getFileInfo(previewUrl).icon
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1257,
+                                            lineNumber: 1298,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3097,7 +3244,7 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                     children: "暂不支持在线预览"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1261,
+                                                    lineNumber: 1302,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3109,13 +3256,13 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1262,
+                                                    lineNumber: 1303,
                                                     columnNumber: 23
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1260,
+                                            lineNumber: 1301,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -3129,35 +3276,35 @@ function PositionDetailDialog({ open, onOpenChange, position, onSave, saving }) 
                                                 children: "立即下载"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 1267,
+                                                lineNumber: 1308,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1266,
+                                            lineNumber: 1307,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1256,
+                                    lineNumber: 1297,
                                     columnNumber: 19
                                 }, this)
                             }, void 0, false)
                         }, void 0, false, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 1238,
+                            lineNumber: 1279,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/modules/organization.tsx",
-                    lineNumber: 1219,
+                    lineNumber: 1260,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 1218,
+                lineNumber: 1259,
                 columnNumber: 7
             }, this)
         ]
@@ -3212,7 +3359,6 @@ function PositionModule() {
         setDetailOpen(true);
     }, []);
     const handleDelete = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(async (id, name)=>{
-        if (!confirm(`确定删除「${name}」？此操作不可撤销。`)) return;
         await fetch(`/api/positions?id=${id}`, {
             method: "DELETE"
         });
@@ -3237,7 +3383,7 @@ function PositionModule() {
                                 children: "岗位管理"
                             }, void 0, false, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 1356,
+                                lineNumber: 1396,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3245,13 +3391,13 @@ function PositionModule() {
                                 children: "管理岗位体系、职级序列和岗位编制，支持按运营、市场营销和职能体系分类"
                             }, void 0, false, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 1357,
+                                lineNumber: 1397,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 1355,
+                        lineNumber: 1395,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -3261,20 +3407,20 @@ function PositionModule() {
                                 className: "mr-2 size-4"
                             }, void 0, false, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 1362,
+                                lineNumber: 1402,
                                 columnNumber: 11
                             }, this),
                             "新增岗位"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 1361,
+                        lineNumber: 1401,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 1354,
+                lineNumber: 1394,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3290,12 +3436,12 @@ function PositionModule() {
                                         className: "size-5"
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 1372,
+                                        lineNumber: 1412,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1371,
+                                    lineNumber: 1411,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3305,7 +3451,7 @@ function PositionModule() {
                                             children: "岗位总数"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1375,
+                                            lineNumber: 1415,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3313,24 +3459,24 @@ function PositionModule() {
                                             children: isLoading ? "-" : positions.length
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1376,
+                                            lineNumber: 1416,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1374,
+                                    lineNumber: 1414,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 1370,
+                            lineNumber: 1410,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 1369,
+                        lineNumber: 1409,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
@@ -3343,12 +3489,12 @@ function PositionModule() {
                                         className: "size-5"
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 1383,
+                                        lineNumber: 1423,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1382,
+                                    lineNumber: 1422,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3358,7 +3504,7 @@ function PositionModule() {
                                             children: "总编制"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1386,
+                                            lineNumber: 1426,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3366,24 +3512,24 @@ function PositionModule() {
                                             children: isLoading ? "-" : positions.reduce((sum, p)=>sum + p.headcount, 0)
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1387,
+                                            lineNumber: 1427,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1385,
+                                    lineNumber: 1425,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 1381,
+                            lineNumber: 1421,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 1380,
+                        lineNumber: 1420,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
@@ -3396,12 +3542,12 @@ function PositionModule() {
                                         className: "size-5"
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 1396,
+                                        lineNumber: 1436,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1395,
+                                    lineNumber: 1435,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3411,7 +3557,7 @@ function PositionModule() {
                                             children: "缺编人数"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1399,
+                                            lineNumber: 1439,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3419,30 +3565,30 @@ function PositionModule() {
                                             children: isLoading ? "-" : positions.reduce((sum, p)=>sum + (p.headcount - p.filled), 0)
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1400,
+                                            lineNumber: 1440,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1398,
+                                    lineNumber: 1438,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 1394,
+                            lineNumber: 1434,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 1393,
+                        lineNumber: 1433,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 1368,
+                lineNumber: 1408,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
@@ -3458,7 +3604,7 @@ function PositionModule() {
                                         className: "absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground"
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 1412,
+                                        lineNumber: 1452,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -3468,23 +3614,23 @@ function PositionModule() {
                                         onChange: (e)=>setSearch(e.target.value)
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 1413,
+                                        lineNumber: 1453,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/modules/organization.tsx",
-                                lineNumber: 1411,
+                                lineNumber: 1451,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 1410,
+                            lineNumber: 1450,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 1409,
+                        lineNumber: 1449,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -3493,7 +3639,7 @@ function PositionModule() {
                             children: "加载岗位数据失败，请检查 Supabase 配置"
                         }, void 0, false, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 1424,
+                            lineNumber: 1464,
                             columnNumber: 13
                         }, this) : isLoading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex items-center justify-center py-12",
@@ -3502,7 +3648,7 @@ function PositionModule() {
                                     className: "size-6 animate-spin text-muted-foreground"
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1427,
+                                    lineNumber: 1467,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3510,13 +3656,13 @@ function PositionModule() {
                                     children: "加载中..."
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1428,
+                                    lineNumber: 1468,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 1426,
+                            lineNumber: 1466,
                             columnNumber: 13
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Table"], {
                             children: [
@@ -3527,49 +3673,49 @@ function PositionModule() {
                                                 children: "岗位编码"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 1434,
+                                                lineNumber: 1474,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableHead"], {
                                                 children: "岗位名称"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 1435,
+                                                lineNumber: 1475,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableHead"], {
                                                 children: "所属体系"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 1436,
+                                                lineNumber: 1476,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableHead"], {
                                                 children: "职级范围"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 1437,
+                                                lineNumber: 1477,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableHead"], {
                                                 children: "部门"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 1438,
+                                                lineNumber: 1478,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableHead"], {
                                                 children: "在岗 / 编制"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 1439,
+                                                lineNumber: 1479,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableHead"], {
                                                 children: "薪资范围"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 1440,
+                                                lineNumber: 1480,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableHead"], {
@@ -3577,18 +3723,18 @@ function PositionModule() {
                                                 children: "操作"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                lineNumber: 1441,
+                                                lineNumber: 1481,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 1433,
+                                        lineNumber: 1473,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1432,
+                                    lineNumber: 1472,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableBody"], {
@@ -3599,12 +3745,12 @@ function PositionModule() {
                                             children: search ? "未找到匹配岗位" : "暂无岗位数据"
                                         }, void 0, false, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1447,
+                                            lineNumber: 1487,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/modules/organization.tsx",
-                                        lineNumber: 1446,
+                                        lineNumber: 1486,
                                         columnNumber: 19
                                     }, this) : filteredPositions.map((pos)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableRow"], {
                                             children: [
@@ -3613,7 +3759,7 @@ function PositionModule() {
                                                     children: pos.code || "-"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1454,
+                                                    lineNumber: 1494,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -3621,7 +3767,7 @@ function PositionModule() {
                                                     children: pos.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1455,
+                                                    lineNumber: 1495,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -3631,12 +3777,12 @@ function PositionModule() {
                                                         children: pos.family
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 1457,
+                                                        lineNumber: 1497,
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1456,
+                                                    lineNumber: 1496,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -3644,7 +3790,7 @@ function PositionModule() {
                                                     children: pos.level
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1461,
+                                                    lineNumber: 1501,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -3652,7 +3798,7 @@ function PositionModule() {
                                                     children: pos.department_name || "-"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1462,
+                                                    lineNumber: 1502,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -3668,7 +3814,7 @@ function PositionModule() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 1465,
+                                                                lineNumber: 1505,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$progress$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Progress"], {
@@ -3676,7 +3822,7 @@ function PositionModule() {
                                                                 className: "h-1.5 w-16"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 1468,
+                                                                lineNumber: 1508,
                                                                 columnNumber: 27
                                                             }, this),
                                                             pos.filled < pos.headcount && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Badge"], {
@@ -3689,18 +3835,18 @@ function PositionModule() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 1473,
+                                                                lineNumber: 1513,
                                                                 columnNumber: 29
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 1464,
+                                                        lineNumber: 1504,
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1463,
+                                                    lineNumber: 1503,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -3708,7 +3854,7 @@ function PositionModule() {
                                                     children: pos.salary
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1482,
+                                                    lineNumber: 1522,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$table$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
@@ -3726,12 +3872,12 @@ function PositionModule() {
                                                                     className: "size-3.5"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                                    lineNumber: 1492,
+                                                                    lineNumber: 1532,
                                                                     columnNumber: 29
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 1485,
+                                                                lineNumber: 1525,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -3743,68 +3889,140 @@ function PositionModule() {
                                                                     className: "size-3.5"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                                    lineNumber: 1500,
+                                                                    lineNumber: 1540,
                                                                     columnNumber: 29
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 1494,
+                                                                lineNumber: 1534,
                                                                 columnNumber: 27
                                                             }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                                                                variant: "ghost",
-                                                                size: "icon",
-                                                                className: "size-8 text-destructive",
-                                                                onClick: ()=>handleDelete(pos.id, pos.name),
-                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
-                                                                    className: "size-3.5"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/components/modules/organization.tsx",
-                                                                    lineNumber: 1508,
-                                                                    columnNumber: 29
-                                                                }, this)
-                                                            }, void 0, false, {
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialog"], {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogTrigger"], {
+                                                                        asChild: true,
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                                                                            variant: "ghost",
+                                                                            size: "icon",
+                                                                            className: "size-8 text-destructive",
+                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
+                                                                                className: "size-3.5"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/components/modules/organization.tsx",
+                                                                                lineNumber: 1549,
+                                                                                columnNumber: 33
+                                                                            }, this)
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/components/modules/organization.tsx",
+                                                                            lineNumber: 1544,
+                                                                            columnNumber: 31
+                                                                        }, this)
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/components/modules/organization.tsx",
+                                                                        lineNumber: 1543,
+                                                                        columnNumber: 29
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogContent"], {
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogHeader"], {
+                                                                                children: [
+                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogTitle"], {
+                                                                                        children: "确认删除岗位"
+                                                                                    }, void 0, false, {
+                                                                                        fileName: "[project]/components/modules/organization.tsx",
+                                                                                        lineNumber: 1554,
+                                                                                        columnNumber: 33
+                                                                                    }, this),
+                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogDescription"], {
+                                                                                        children: [
+                                                                                            "确定删除「",
+                                                                                            pos.name,
+                                                                                            "」？此操作不可撤销。"
+                                                                                        ]
+                                                                                    }, void 0, true, {
+                                                                                        fileName: "[project]/components/modules/organization.tsx",
+                                                                                        lineNumber: 1555,
+                                                                                        columnNumber: 33
+                                                                                    }, this)
+                                                                                ]
+                                                                            }, void 0, true, {
+                                                                                fileName: "[project]/components/modules/organization.tsx",
+                                                                                lineNumber: 1553,
+                                                                                columnNumber: 31
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogFooter"], {
+                                                                                children: [
+                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogCancel"], {
+                                                                                        children: "取消"
+                                                                                    }, void 0, false, {
+                                                                                        fileName: "[project]/components/modules/organization.tsx",
+                                                                                        lineNumber: 1560,
+                                                                                        columnNumber: 33
+                                                                                    }, this),
+                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogAction"], {
+                                                                                        onClick: ()=>handleDelete(pos.id, pos.name),
+                                                                                        className: "bg-destructive text-white hover:bg-destructive/90",
+                                                                                        children: "确认删除"
+                                                                                    }, void 0, false, {
+                                                                                        fileName: "[project]/components/modules/organization.tsx",
+                                                                                        lineNumber: 1561,
+                                                                                        columnNumber: 33
+                                                                                    }, this)
+                                                                                ]
+                                                                            }, void 0, true, {
+                                                                                fileName: "[project]/components/modules/organization.tsx",
+                                                                                lineNumber: 1559,
+                                                                                columnNumber: 31
+                                                                            }, this)
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/components/modules/organization.tsx",
+                                                                        lineNumber: 1552,
+                                                                        columnNumber: 29
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
                                                                 fileName: "[project]/components/modules/organization.tsx",
-                                                                lineNumber: 1502,
+                                                                lineNumber: 1542,
                                                                 columnNumber: 27
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/modules/organization.tsx",
-                                                        lineNumber: 1484,
+                                                        lineNumber: 1524,
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/modules/organization.tsx",
-                                                    lineNumber: 1483,
+                                                    lineNumber: 1523,
                                                     columnNumber: 23
                                                 }, this)
                                             ]
                                         }, pos.id, true, {
                                             fileName: "[project]/components/modules/organization.tsx",
-                                            lineNumber: 1453,
+                                            lineNumber: 1493,
                                             columnNumber: 21
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/modules/organization.tsx",
-                                    lineNumber: 1444,
+                                    lineNumber: 1484,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/modules/organization.tsx",
-                            lineNumber: 1431,
+                            lineNumber: 1471,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/modules/organization.tsx",
-                        lineNumber: 1422,
+                        lineNumber: 1462,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 1408,
+                lineNumber: 1448,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(PositionDialog, {
@@ -3816,7 +4034,7 @@ function PositionModule() {
                 saving: saving
             }, void 0, false, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 1521,
+                lineNumber: 1581,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(PositionDetailDialog, {
@@ -3827,13 +4045,13 @@ function PositionModule() {
                 saving: saving
             }, void 0, false, {
                 fileName: "[project]/components/modules/organization.tsx",
-                lineNumber: 1530,
+                lineNumber: 1590,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/modules/organization.tsx",
-        lineNumber: 1353,
+        lineNumber: 1393,
         columnNumber: 5
     }, this);
 }
